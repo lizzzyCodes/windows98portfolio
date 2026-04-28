@@ -1,13 +1,11 @@
-import DialogBox from "./src/components/dialogbox/DialogBox";
-//import "98.css/style.css";
 import "../98.css/style.css";
-// if i just install it here on root it should apply everywhere
-// Main Page
-
+import Window from "./src/components/Window/Window";
+import Footer from "./src/components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <DialogBox width={300} dialogTitle="whoami" />
+      <Window width={300} dialogTitle="whoami" />
+      <Footer />
     </>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import "98.css/style.css";
 
-interface DialogBoxProps {
+interface WindowProps {
   width?: number;
   dialogTitle: string;
 }
 // export default function ImageLink({ src, alt, link, label }: ImageProps) {
-export default function DialogBox({ width, dialogTitle }: DialogBoxProps) {
+export default function Window({ width, dialogTitle }: WindowProps) {
   return (
     <div style={{ width: width }} className="window">
       <div className="title-bar">
