@@ -6,7 +6,7 @@ import MusicWindow from "./src/components/MusicWindow/MusicWindow";
 export default function Home() {
   return (
     <>
-      <MusicWindow width={300} dialogTitle="CD Player" />
+      <MusicWindow dialogTitle="CD Player" />
       <Window width={300} dialogTitle="whoami" />
       <Footer />
     </>

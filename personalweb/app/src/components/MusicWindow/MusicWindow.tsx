@@ -1,4 +1,5 @@
 import "98.css/style.css";
+import Image from "next/image";
 interface MusicWindowProps {
   dialogTitle: string;
   width?: number;
@@ -6,7 +7,7 @@ interface MusicWindowProps {
 
 export default function MusicWindow({ width, dialogTitle }: MusicWindowProps) {
   return (
-    <div style={{ width: width }} className="window">
+    <div style={{ width }} className="window">
       <div className="title-bar">
         <div className="title-bar-text">{dialogTitle}</div>
         <div className="title-bar-controls">
@@ -16,32 +17,45 @@ export default function MusicWindow({ width, dialogTitle }: MusicWindowProps) {
         </div>
       </div>
 
-      <div className="window-body">
-        <div className="field-row" style={{ justifyContent: "center" }}>
-          <div className="music-dropdown">
-            <select>
-              <option>5 - Incredible!</option>
-              <option>4 - Great!</option>
-              <option>3 - Pretty good</option>
-              <option>2 - Not so great</option>
-              <option>1 - Unfortunate</option>
-            </select>
-            <select>
-              <option>5 - Incredible!</option>
-              <option>4 - Great!</option>
-              <option>3 - Pretty good</option>
-              <option>2 - Not so great</option>
-              <option>1 - Unfortunate</option>
+      <div className="window-body" style={{ display: "flex", gap: "12px" }}>
+        <div style={{ flexShrink: 0 }}>
+          <Image
+            src="/images/deftones.jpg"
+            width={100}
+            height={100}
+            alt="deftones album cover"
+          />
+        </div>
+
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            gap: "4px",
+          }}
+        >
+          <div className="field-row">
+            <label>Artist:</label>
+            <select style={{ flex: 1 }}>
+              <option>Deftones</option>
             </select>
           </div>
+
+          <div className="field-row">
+            <label>Track:</label>
+            <select style={{ flex: 1 }}>
+              <option>Be Quiet And Drive(Far Away)</option>
+            </select>
+          </div>
+          <input type="range" min="0" max="100" value="25" />
+          <div style={{ display: "flex", gap: "4px" }}>
+            <button aria-label="Rewind">⏪</button>
+            <button aria-label="Fast Forward">⏩</button>
+            <button aria-label="Play">▶</button>
+            <button aria-label="Stop">⏹</button>
+          </div>
         </div>
-        <div className="field-row" style={{ width: "300px" }}>
-          <label htmlFor="range22">Volume:</label>
-          <label htmlFor="range23">Low</label>
-          <input id="range23" type="range" min="1" max="11" value="5" />
-          <label htmlFor="range24">High</label>
-        </div>
-        <div className="title-bar-controls"></div>
       </div>
     </div>
   );
