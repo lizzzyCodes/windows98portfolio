@@ -2,18 +2,16 @@
     position: absolute;
     bottom: 100%;
     left: 0;
-    width: 200px;
+    width: 100px;
     background: #fff0f5;
     border: 2px solid #a8518a;
   }
   
   .header {
-
     padding: 4px 8px;
     text-align: center;
-    color: #2c1b24;
+    color: #A8518A;
     background: #fff0f5;
-    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a;
     font-weight: bold;
   }
   
@@ -23,19 +21,14 @@
   }
   
   .menuItem {
-    /* Reset 98.css button styles */
     all: unset;
     box-sizing: border-box;
-  
     display: flex;
     align-items: center;
     gap: 8px;
     width: 100%;
-    padding: 6px 12px;
-    background: #fff0f5;
-    color: #2c1b24;
+    color: #A8518A;
     cursor: pointer;
-    border-bottom: 1px solid #f5a8d0;
   }
   
   .menuItem:last-child {
