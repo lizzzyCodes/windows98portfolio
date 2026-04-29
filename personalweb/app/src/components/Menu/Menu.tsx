@@ -19,7 +19,7 @@ export default function Menu() {
       <div className={styles.header} role="heading" aria-level={2}>
         Menu
       </div>
-      <div style={{ borderBottom: "1px solid #f5a8d0" }}></div>
+      <div className={styles.divider}></div>
       <div className={styles.items}>
         {MENU_ITEMS.map(({ label, icon }) => (
           <button key={label} className={styles.menuItem}>
