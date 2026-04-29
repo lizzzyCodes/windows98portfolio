@@ -1,12 +1,15 @@
-import React from "react";
 import "98.css/style.css";
-
 interface WindowProps {
-  width?: number;
   dialogTitle: string;
+  width?: number;
+  windowBody?: string;
 }
-// export default function ImageLink({ src, alt, link, label }: ImageProps) {
-export default function Window({ width, dialogTitle }: WindowProps) {
+
+export default function Window({
+  width,
+  dialogTitle,
+  windowBody,
+}: WindowProps) {
   return (
     <div style={{ width: width }} className="window">
       <div className="title-bar">
@@ -20,7 +23,7 @@ export default function Window({ width, dialogTitle }: WindowProps) {
 
       <div className="window-body">
         <div className="field-row" style={{ justifyContent: "center" }}>
-          <p> hello my name is elizabeth welcome </p>
+          <p> {windowBody}</p>
         </div>
       </div>
     </div>

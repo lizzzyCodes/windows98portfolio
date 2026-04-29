@@ -3,14 +3,14 @@ import styles from "../Menu/Menu.module.css";
 
 interface MenuItem {
   label: string;
-  icon?: string;
+  icon: string;
 }
 
 const MENU_ITEMS: MenuItem[] = [
   { label: "Resume", icon: "/icon/Resume.jpg" },
   { label: "Projects", icon: "/icon/Resume.jpg" },
   { label: "About Me", icon: "/icon/Resume.jpg" },
-  { label: "Music", icon: "/icon/Resume.jpg" },
+  { label: "Music", icon: "/icon/cd.png" },
 ];
 
 export default function Menu() {
