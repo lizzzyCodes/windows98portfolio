@@ -16,8 +16,8 @@ export default function ButtonWithLogo({
         <div style={{ display: "flex", alignItems: "center" }}>
           <Image
             src={src ?? "TODO replace"}
-            width={20}
-            height={20}
+            width={16}
+            height={16}
             alt={alt ?? "TODO replace"}
           />
           {buttonLabel}

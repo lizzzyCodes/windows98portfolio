@@ -12,7 +12,7 @@ const MENU_ITEMS: MenuItem[] = [
   { label: "About Me", icon: "/icon/Resume.jpg" },
   { label: "Music", icon: "/icon/cd.png" },
 ];
-
+// <div className={`field-border ${styles.bioContainer}`}>
 export default function Menu() {
   return (
     <div className={styles.menu}>
