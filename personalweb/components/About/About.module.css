@@ -3,6 +3,12 @@
     gap: 12px
 }
 
+.image {
+    width: 100%;
+    position: relative;
+    height: 200px
+}
+
 .heading {
     font-family: Arial, sans-serif;
     font-size: 24px;

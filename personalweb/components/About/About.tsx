@@ -5,11 +5,17 @@ import ButtonWithLogo from "../Buttons/ButtonWithLogo";
 import styles from "./About.module.css";
 import Fieldset from "../Fieldset/Fieldset";
 
+// TODO:
+// update cover photo
+// update color on text
+// give it a fixed size but also responsive.
+// update padding on the bottom of buttons
+
 export default function About() {
   return (
     <Window title="whoami">
-      <div style={{ display: "flex", gap: "12px" }}>
-        <div style={{ width: "100%", position: "relative", height: "200px" }}>
+      <div className={styles.aboutContainer}>
+        <div className={styles.image}>
           <Image
             src="/images/deftones.jpg"
             fill
