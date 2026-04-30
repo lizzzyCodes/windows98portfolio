@@ -1,0 +1,10 @@
+.addressBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2C1B24
+}
+
+.addressBar .field-border {
+  flex: 1; /* 🔥 takes remaining space */
+}
