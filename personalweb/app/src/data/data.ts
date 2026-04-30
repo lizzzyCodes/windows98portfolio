@@ -23,3 +23,32 @@ export const desktopIcons = [
   { folderName: "Music", icon: "/icon/cd.png" },
   { folderName: "Outlook", icon: "/icon/email.png" },
 ];
+
+export const techStackData = [
+  {
+    category: "Languages",
+    skills: "JavaScript (ES6+), TypeScript, Python, SQL, HTML5, CSS3, Java",
+  },
+  {
+    category: "Frontend",
+    skills: "React, Redux, Next.js, Storybook, Tailwind CSS, Webpack, MUI",
+  },
+  { category: "Backend", skills: "Node.js, REST APIs, GraphQL" },
+  {
+    category: "Cloud & DevOps",
+    skills: "OCI, CI/CD, Jenkins",
+  },
+  {
+    category: "Testing",
+    skills:
+      "Jest, Mocha, React Testing Library, WebdriverIO, BrowserStack, TDD",
+  },
+  {
+    category: "Observability",
+    skills: "Splunk, Grafana, On-Call Incident Response",
+  },
+  {
+    category: "Other",
+    skills: "Git, Version Control ",
+  },
+];
