@@ -1,0 +1,9 @@
+
+.buttonLabel {
+    display:flex;
+    align-items: center;
+}
+
+.icon {
+    padding: 4px;
+}

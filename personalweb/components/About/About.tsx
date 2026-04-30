@@ -39,7 +39,7 @@ export default function About() {
           ~30 resumes for college students and interns. Through SHPE, I mentored
           a student through interview prep we spent hours on mock interviews and
           I was there for support every step of the way."
-      />{" "}
+      />
       <Fieldset
         legend="Background"
         text="This work is personal to me. My own university journey started with

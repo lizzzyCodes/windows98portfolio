@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import styles from "./Buttons.module.css";
 interface ButtonWithLogoProps {
   buttonLabel: string;
   src?: string;
@@ -13,17 +13,18 @@ export default function ButtonWithLogo({
   return (
     <>
       <button>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Image
-            src={src ?? "TODO replace"}
-            width={16}
-            height={16}
-            alt={alt ?? "TODO replace"}
-          />
+        <div className={styles.buttonLabel}>
+          <div className={styles.icon}>
+            <Image
+              src={src ?? "TODO replace"}
+              width={16}
+              height={16}
+              alt={alt ?? "TODO replace"}
+            />
+          </div>
           {buttonLabel}
         </div>
       </button>
-      ;
     </>
   );
 }
