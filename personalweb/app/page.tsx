@@ -10,11 +10,13 @@ import DesktopItem from "@/components/Desktop/DesktopItem";
 // import LoadingBar from "../components/Loading/Loading";
 //         icon={"/icon/text.jpg"}
 import { desktopIcons } from "./src/data/data";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
     <>
       <div>
+        <About />
         {desktopIcons.map((icon) => (
           <DesktopItem
             key={icon.folderName}
