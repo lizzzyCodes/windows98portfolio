@@ -1,23 +1,10 @@
-import "98.css/style.css";
+import Window from "../Window/Window";
 import Image from "next/image";
-interface MusicWindowProps {
-  dialogTitle: string;
-  width?: number;
-}
 
-export default function MusicWindow({ width, dialogTitle }: MusicWindowProps) {
+export default function MusicWindow() {
   return (
-    <div style={{ width }} className="window">
-      <div className="title-bar">
-        <div className="title-bar-text">{dialogTitle}</div>
-        <div className="title-bar-controls">
-          <button aria-label="Minimize" />
-          <button aria-label="Maximize" />
-          <button aria-label="Close" />
-        </div>
-      </div>
-
-      <div className="window-body" style={{ display: "flex", gap: "12px" }}>
+    <Window title="CD Player" width={500}>
+      <div style={{ display: "flex", gap: "12px" }}>
         <div style={{ flexShrink: 0 }}>
           <Image
             src="/images/deftones.jpg"
@@ -48,7 +35,9 @@ export default function MusicWindow({ width, dialogTitle }: MusicWindowProps) {
               <option>Be Quiet And Drive(Far Away)</option>
             </select>
           </div>
+
           <input type="range" min="0" max="100" value="25" />
+
           <div style={{ display: "flex", gap: "4px" }}>
             <button aria-label="Rewind">⏪</button>
             <button aria-label="Fast Forward">⏩</button>
@@ -57,6 +46,6 @@ export default function MusicWindow({ width, dialogTitle }: MusicWindowProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Window>
   );
 }

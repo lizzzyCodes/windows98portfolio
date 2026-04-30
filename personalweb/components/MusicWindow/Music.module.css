@@ -1,0 +1,7 @@
+.window-body {
+    display: flex;
+    gap: 12px
+}
+.album {
+    flex-shrink: 0;
+}
