@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
-import styles from "../DesktopIcon/DesktopIcon.module.css";
+import styles from "./DesktopIcon.module.css";
 
 interface DesktopItemProps {
   icon: string | undefined;
   iconHeading: string;
   iconSubHeading?: string;
   onClick?: () => void;
+  width?: number;
+  height?: number;
 }
 
 export default function DesktopItem({
@@ -13,14 +16,19 @@ export default function DesktopItem({
   iconHeading,
   iconSubHeading,
   onClick,
+  width = 50,
+  height = 50,
 }: DesktopItemProps) {
   return (
     <>
       <div key={iconHeading} className={styles.folder}>
-        <Image src={icon} width={50} height={50} alt="folder" />
-
+        <Image
+          src={icon ?? "fallback"} // TODO: replace fallback
+          width={width}
+          height={height}
+          alt="folder"
+        />
         <p className={styles.iconheading}>{iconHeading}/</p>
-
         <p className={styles.iconSubheading}>{iconSubHeading}</p>
       </div>
     </>

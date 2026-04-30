@@ -5,6 +5,7 @@
     gap: 0.25rem;          
     padding: 0.75rem;    
     outline: none;
+    border: 2px solid red;
 }
 
 .iconheading {

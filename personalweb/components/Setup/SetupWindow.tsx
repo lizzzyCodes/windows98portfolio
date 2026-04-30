@@ -1,5 +1,5 @@
 import Window from "../Window/Window";
-import DesktopItem from "../DesktopIcon/DesktopIcon";
+import DesktopItem from "../DesktopIcons/DesktopItem";
 import AddressBar from "../AddressBar/AddressBar";
 import StatusBar from "../StatusBar/StatusBar";
 
