@@ -28,8 +28,8 @@ export default function DesktopItem({
           height={height}
           alt="folder"
         />
-        <p className={styles.iconheading}>{iconHeading}/</p>
-        <p className={styles.iconSubheading}>{iconSubHeading}</p>
+        <p className={styles.iconHeading}>{iconHeading}</p>
+        <p className={styles.iconSub}>{iconSubHeading}</p>
       </div>
     </>
   );

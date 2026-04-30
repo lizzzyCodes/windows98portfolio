@@ -8,17 +8,19 @@ import SetupWindow from "@/components/Setup/SetupWindow";
 import { folders } from "./src/data/data";
 import DesktopItem from "@/components/DesktopIcons/DesktopItem";
 // import LoadingBar from "../components/Loading/Loading";
-
+//         icon={"/icon/text.jpg"}
+import { desktopIcons } from "./src/data/data";
 export default function Home() {
   return (
     <>
-      <DesktopItem
-        icon={"/icon/text.jpg"}
-        iconHeading="Resume"
-        width={100}
-        height={100}
-      />
-
+      {desktopIcons.map((icon) => (
+        <DesktopItem
+          key={icon.folderName}
+          icon={icon.icon}
+          iconHeading={`${icon.folderName}`}
+          // onClick={() => setPath(folder.name)} // temp so far
+        />
+      ))}
       <Footer />
     </>
   );

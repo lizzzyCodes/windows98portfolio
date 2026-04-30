@@ -5,15 +5,14 @@
     gap: 0.25rem;          
     padding: 0.75rem;    
     outline: none;
-    border: 2px solid red;
 }
 
-.iconheading {
+.folder .iconHeading {
     margin: 0;
     color: #2C1B24
 }
 
-.iconSubheading {
+.folder .iconSub{
     margin:0;
     color: #8B6B7A
 }
