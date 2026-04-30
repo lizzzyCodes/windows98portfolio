@@ -1,0 +1,35 @@
+/*.desktop {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(auto-fill, 90px);
+    gap: 12px;
+    height: 100vh;
+    padding-bottom: 60px; /* slightly bigger than footer height 
+}*/
+
+.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+.folder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;          
+    padding: 0.75rem;    
+    outline: none;
+    width: 80px;
+}
+
+.iconHeading {
+    margin: 0;
+    color: #2C1B24
+}
+
+.iconSub{
+    margin:0;
+    color: #8B6B7A
+}

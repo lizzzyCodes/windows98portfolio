@@ -1,23 +1,15 @@
 "use client";
 import React from "react";
-import "98.css/style.css";
 import Image from "next/image";
 import moment from "moment";
 import Menu from "../Menu/Menu";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "0",
-        left: "0",
-        zIndex: "1000",
-        width: "100%",
-      }}
-    >
+    <div className={styles.footer}>
       <div
         className="title-bar"
         style={{ justifyContent: "space-between", position: "relative" }}

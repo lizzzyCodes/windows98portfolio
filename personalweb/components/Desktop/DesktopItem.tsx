@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./DesktopIcon.module.css";
+import styles from "./Desktop.module.css";
 
 interface DesktopItemProps {
   icon: string | undefined;
