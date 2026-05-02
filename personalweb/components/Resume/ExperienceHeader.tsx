@@ -1,7 +1,7 @@
 import styles from "./Resume.module.css";
 
 interface ResumeSectionHeaderProps {
-  header: string;
+  header?: string;
   subHeading?: string;
 }
 

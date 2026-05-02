@@ -197,6 +197,16 @@
     }
 }
 
+.divider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1;
+    color: #E09ABE;
+    user-select: none;
+  }
+
 /* Scrollbar Styling */
 /*.textArea::-webkit-scrollbar {
     width: 18px;

@@ -7,6 +7,9 @@ import { Dates } from "./Dates";
 import { Experience } from "./Experience";
 import { techStackData } from "@/app/src/data/data";
 import { TechStack } from "./TechStack";
+import { Divider } from "./Divider";
+import { ContactInfo } from "./ContactInfo";
+import { ResumeSection } from "./ResumeSection";
 
 export default function ResumeWindow() {
   return (
@@ -29,35 +32,49 @@ export default function ResumeWindow() {
           </div>
           <div className="Contact Info Container">
             <span className={styles.title}>SOFTWARE ENGINEER</span>
-            <div className="Contact Info">
-              New York, NY | castieelizabeth896@gmail.com | LinkedIn:
-              www.linkedin.com/in/elizabeth-castillo- | GitHub: @lizzzyCodes
-            </div>
+            <ContactInfo
+              location="New York, NY"
+              email="castieelizabeth896@gmail.com"
+              linkedIn="www.linkedin.com/in/elizabeth-castillo-"
+              github="lizzzyCodes"
+            />
           </div>
-          <SectionHeader header="EXPERIENCE" />
-          <span className={styles.sectionDivider}>
-            -------------------------------------------------------------------------------
-          </span>
-          <ResumeHeader
-            header="PAYPAL"
-            subHeading="Software Engineer Intern, Checkout"
-          />
-          <Dates dates="September 2022 - January 2024" location="Remote" />
-          <Experience
-            data={[
-              "Utilized PayPal's internal tracking and analytics system to capture and log web traffic to be accessed on Looker using JavaScript",
-              "Implemented a proactive approach to software quality by integrating unit test(s) using Jest or Mocha into every pull request creation",
-              "Created and ramped A/B experiments utilizing in-house experimentation platform",
-              "Performed rigorous accessibility testing on new integrations, utilizing WAVE, Lighthouse, and Screen Readers to ensure an inclusive user experience",
-            ]}
-          />
-          <span className={styles.sectionDivider}>
-            ───────────────────────────────────────────────────────────────────────────────
-          </span>
+          <ResumeSection header="EXPERIENCE">
+            <ResumeHeader header="Oracle" subHeading="Software Engineer" />
+            <Dates dates="January 2025 - Current" location="Hybrid" />
+            <Experience
+              data={[
+                "Co-owned 3 core repositories including the DevOps Portal UI serving ~30,000 internal users. ",
+                "Rebuilt a legacy log viewer handling ~800 daily builds replacing legacy implementation with a virtualized table reducing load times from 5 minutes to ~2 seconds using React/TypeScript. Shipped under strict TDD with Jest and React Testing Library.",
+                "Built and shipped a reusable CSV/JSON export component for DevOps component library adopted across the OCI engineering org. Designed a V2 with polling logic for backend-paginated datasets. Authored Storybook documentation and added unit test coverage with Jest.",
+                "Developed a proof of concept using Cucumber to enable AI agent-driven integration testing. Validated the end-to-end approach using a stub HTML page laying groundwork for automated test infrastructure.",
+                "Independently migrated the Source Control Management team from a monolithic repo to an independent plugin, migrating ~50 files and creating Terraform infrastructure for sandbox and production environments.",
+                "Implemented a feature flag to transition ~2,000 users off a legacy API. Collaborated cross-functionally with the CI/CD validating behavior in staging and deployment. ",
+                "Accelerated feature delivery by applying AI assisted development tools including Cline and OpenAI Codex in day-to-day work.",
+                "Owned on-call responsibilities including production deployments, Terraform bucket creation(s), Grafana monitoring, and Jira triage; hosted office hours to support plugin development teams and managed team Slack channels.",
+              ]}
+            />
+          </ResumeSection>
+
+          <ResumeSection>
+            <ResumeHeader header="PayPal" subHeading="Software Engineer" />
+            <Dates dates="January 2022 - March 2023" location="Hybrid" />
+            <Experience
+              data={[
+                " Implemented a new eligibility and redirection feature in the router layer using JavaScript and SSR, reducing checkout latency by ~3 seconds for 45% of checkout to enhance the checkout platform, covered by a full test suite.",
+                "Developed a proof of concept using the Apollo Server  plugin to cache GraphQL responses within the mid-tier using JavaScript.",
+                "Increased test coverage by 90% using Mocha and test-driven development ensuring the functionality and accuracy of new product features to meet Q1 goals.",
+                " Developed and maintained over 15+ observability dashboards using Splunk to detect and investigate root cause of problems in production quickly.",
+                " Designed, developed and maintained automated test suites with over 20 tests for a new checkout route using Object-Oriented Design Principles, BrowserStack, and WebdriverIO. This effort increased code coverage and automation metrics as part of Q2 goals.",
+                "  Collaborated with the external BrowserStack team to develop the first iOS automated test with Apple Pay wallet integration kickstarting Apple Pay testing to ensure seamless functionality on mobile platforms and increasing our automation testing as part of Q2 goals.",
+                " Experienced in an Agile environment, contributing to daily scrum meetings, providing technical input on planning, design and requirements for new features, reviewing and providing feedback on PRs, maintaining detailed documentation, providing estimates during story grooming sessions, and leading retrospectives.",
+              ]}
+            />
+          </ResumeSection>
+
+          <Divider variant="single" />
           <SectionHeader header="EDUCATION" />
-          <span className={styles.sectionDivider}>
-            -------------------------------------------------------------------------------
-          </span>
+          <Divider variant="dashed" />
           <ResumeHeader
             header="UNIVERSITY OF WASHINGTON "
             subHeading="Bachelor of Arts, Data Science"
@@ -71,19 +88,13 @@ export default function ResumeWindow() {
               "Performed rigorous accessibility testing on new integrations, utilizing WAVE, Lighthouse, and Screen Readers to ensure an inclusive user experience",
             ]}
           />
-          <span className={styles.sectionDivider}>
-            ───────────────────────────────────────────────────────────────────────────────
-          </span>
+          <Divider variant="single" />
           <SectionHeader header="TECH STACK" />
+          <Divider variant="dashed" />
           <TechStack data={techStackData} />
-          <span className={styles.sectionDivider}>
-            ───────────────────────────────────────────────────────────────────────────────
-          </span>
+          <Divider variant="single" />
           <SectionHeader header="PROJECTS" />
-          <span className={styles.sectionDivider}>
-            -------------------------------------------------------------------------------
-          </span>
-          {"\n\n"}
+          <Divider variant="dashed" />
           <ResumeHeader header="BUDGET TRACKER WEB APP" />
           <Experience
             bulletStyle="•"
@@ -94,8 +105,7 @@ export default function ResumeWindow() {
               "Performed rigorous accessibility testing on new integrations, utilizing WAVE, Lighthouse, and Screen Readers to ensure an inclusive user experience",
             ]}
           />
-          <ResumeHeader header="RECIPE FINDER<" />
-
+          <ResumeHeader header="RECIPE FINDER" />
           <Experience
             bulletStyle="•"
             data={[
@@ -105,9 +115,7 @@ export default function ResumeWindow() {
               "Performed rigorous accessibility testing on new integrations, utilizing WAVE, Lighthouse, and Screen Readers to ensure an inclusive user experience",
             ]}
           />
-          <span className={styles.sectionDivider}>
-            ═══════════════════════════════════════════════════════════════════════════════
-          </span>
+          <Divider variant="double" />
           <span className={styles.cursor}></span>
         </div>
       </div>
