@@ -11,6 +11,7 @@ import { Divider } from "./Divider";
 import { ContactInfo } from "./ContactInfo";
 import { ResumeSection } from "./ResumeSection";
 
+//TODO: update the colors of the scroll bar, update the css and break up the components
 export default function ResumeWindow() {
   return (
     <Window title="Resume.txt - Notepad" width={800}>
@@ -22,9 +23,9 @@ export default function ResumeWindow() {
               ╔═══════════════════════════════════════════════════════════════════════════╗
             </span>
             {"\n"}
-            {"                   "}
+
             <span className={styles.name}>ELIZABETH CASTILLO</span>
-            {"                    "}
+
             {"\n"}
             <span className={styles.asciiBorder}>
               ╚═══════════════════════════════════════════════════════════════════════════╝

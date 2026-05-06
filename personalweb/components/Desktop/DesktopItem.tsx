@@ -13,15 +13,15 @@ interface DesktopItemProps {
 
 export default function DesktopItem({
   icon,
+  onClick,
   iconHeading,
   iconSubHeading,
-  onClick,
   width = 50,
   height = 50,
 }: DesktopItemProps) {
   return (
     <>
-      <div key={iconHeading} className={styles.folder}>
+      <div key={iconHeading} className={styles.folder} onClick={onClick}>
         <Image
           src={icon ?? "fallback"} // TODO: replace fallback
           width={width}

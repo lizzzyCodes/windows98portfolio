@@ -16,12 +16,16 @@ export const desktopIcons = [
   {
     folderName: "About",
     icon: "/icon/Resume.png",
+    type: "about",
   },
-  { folderName: "My Computer", icon: "/icon/mycomputer.jpg" },
-  { folderName: "Projects", icon: "/icon/folder.png" },
-  { folderName: "Resume", icon: "/icon/text.png" },
-  { folderName: "Music", icon: "/icon/cd.png" },
-  { folderName: "Outlook", icon: "/icon/email.png" },
+  {
+    folderName: "My Computer",
+    type: "mycomputer",
+    icon: "/icon/mycomputer.jpg",
+  },
+  { folderName: "Resume", type: "resume", icon: "/icon/text.png" },
+  { folderName: "Music", type: "music", icon: "/icon/cd.png" },
+  { folderName: "Outlook", type: "connect", icon: "/icon/email.png" },
 ];
 
 export const techStackData = [
@@ -50,5 +54,26 @@ export const techStackData = [
   {
     category: "Other",
     skills: "Git, Version Control ",
+  },
+];
+
+export const connectLinks = [
+  {
+    label: "LinkedIn",
+    icon: "/icon/email.png",
+    href: "https://linkedin.com/in/yourhandle",
+    description: "Let's connect professionally",
+  },
+  {
+    label: "GitHub",
+    icon: "/icon/github.png",
+    href: "https://github.com/yourhandle",
+    description: "See my code",
+  },
+  {
+    label: "Coffee Chat",
+    icon: "/icon/coffee.png",
+    href: "https://calendly.com/ecastillooo/coffee-chat",
+    description: "Calendly link",
   },
 ];

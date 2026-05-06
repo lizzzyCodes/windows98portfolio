@@ -15,7 +15,6 @@ export const TechStack = ({ data }: TechStackProps) => (
     {data.map((item, index) => (
       <React.Fragment key={index}>
         <span className={styles.category}>{item.category}:</span>
-        {"    "}
         <span>{item.skills}</span>
         {"\n"}
       </React.Fragment>

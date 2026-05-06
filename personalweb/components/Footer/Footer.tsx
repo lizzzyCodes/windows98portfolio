@@ -36,6 +36,8 @@ export default function Footer() {
           }}
           disabled={true}
         >
+          <Image src="/icon/people.png" width={10} height={10} alt="users" />
+
           {moment().format("HH:mm")}
         </button>
       </div>

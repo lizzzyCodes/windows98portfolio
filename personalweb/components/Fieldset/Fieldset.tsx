@@ -1,5 +1,4 @@
 import styles from "../About/About.module.css";
-
 interface FieldsetProps {
   text: string;
   legend?: string;
