@@ -1,4 +1,4 @@
-export const MentorshipTab = () => {
+const MentorshipTab = () => {
   return (
     <>
       <ul className="tree-view">
@@ -25,6 +25,11 @@ export const MentorshipTab = () => {
               reviewed and gave feedback on ~30 resumes for college students and
               interns.
             </li>
+            <li>
+              Through SHPE, I mentored a student through interview prep spending
+              1:1s on mock interviews and showing up for support every step of
+              the way. She now works at Nintendo.
+            </li>
           </ul>
         </li>
         <li>
@@ -39,3 +44,5 @@ export const MentorshipTab = () => {
     </>
   );
 };
+
+export default MentorshipTab;

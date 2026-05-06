@@ -1,12 +1,8 @@
 import React from "react";
 import StatusBar from "../StatusBar/StatusBar";
 import Window from "../Window/Window";
-import Image from "next/image";
-import ButtonWithLogo from "../Buttons/ButtonWithLogo";
-import styles from "./About.module.css";
-import { socialLinks } from "@/app/src/data/data";
 import { BackgroundTab } from "./BackgroundTab";
-import { MentorshipTab } from "./MentorshipTab";
+import MentorshipTab from "./MentorshipTab";
 import AboutTab from "./AboutTab";
 
 // TODO:
@@ -50,38 +46,12 @@ export default function About() {
           ))}
         </menu>
 
-        <div className="window" role="tabpanel">
-          <div className="window-body">
-            {activeTab === "about" && (
-              <>
-                <AboutTab />
-              </>
-            )}
-
-            {activeTab === "mentorship" && <MentorshipTab />}
-
-            {activeTab === "background" && <BackgroundTab />}
-          </div>
-        </div>
+        <div>{TAB_COMPONENTS[activeTab]}</div>
       </div>
 
-      <StatusBar footerText={activeTab} />
+      <StatusBar
+        footerText={activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
+      />
     </Window>
   );
 }
-
-/* 
-
-
-const TAB_COMPONENTS: Record<Tab, React.ReactNode> = {
-  about: <AboutTab />,
-  mentorship: <MentorshipTab />,
-  background: <BackgroundTab />,
-};
-
-const [activeTab, setActiveTab] = React.useState<Tab>("about");
-
-// render
-<div>{TAB_COMPONENTS[activeTab]}</div>
-
-*/
