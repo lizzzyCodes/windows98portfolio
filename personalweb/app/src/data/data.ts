@@ -57,23 +57,29 @@ export const techStackData = [
   },
 ];
 
+export const socialLinks = {
+  github: "https://github.com/yourhandle",
+  linkedIn: "https://linkedin.com/in/yourhandle",
+  calendly: "https://calendly.com/ecastillooo/coffee-chat",
+};
+
 export const connectLinks = [
   {
     label: "LinkedIn",
     icon: "/icon/email.png",
-    href: "https://linkedin.com/in/yourhandle",
+    href: socialLinks.linkedIn,
     description: "Let's connect professionally",
   },
   {
     label: "GitHub",
     icon: "/icon/github.png",
-    href: "https://github.com/yourhandle",
+    href: socialLinks.github,
     description: "See my code",
   },
   {
     label: "Coffee Chat",
     icon: "/icon/coffee.png",
-    href: "https://calendly.com/ecastillooo/coffee-chat",
+    href: socialLinks.calendly,
     description: "Calendly link",
   },
 ];

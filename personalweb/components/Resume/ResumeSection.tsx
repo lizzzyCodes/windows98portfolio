@@ -6,7 +6,7 @@ interface ResumeSectionProps {
   children: React.ReactNode;
 }
 
-export function ResumeSection({ header, children }: ResumeSectionProps) {
+const ResumeSection = ({ header, children }: ResumeSectionProps) => {
   return (
     <>
       {header && (
@@ -19,4 +19,5 @@ export function ResumeSection({ header, children }: ResumeSectionProps) {
       {children}
     </>
   );
-}
+};
+export default ResumeSection;

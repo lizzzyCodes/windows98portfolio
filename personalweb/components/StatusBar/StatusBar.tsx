@@ -1,12 +1,13 @@
 interface StatusBarProps {
   footerText: string;
 }
-export default function StatusBar({ footerText }: StatusBarProps) {
+
+const StatusBar = ({ footerText }: StatusBarProps) => {
   return (
-    <>
-      <div className="field-border" style={{ padding: "8px" }}>
-        {footerText}
-      </div>
-    </>
+    <div className="field-border" style={{ padding: "8px" }}>
+      {footerText}
+    </div>
   );
-}
+};
+
+export default StatusBar;
