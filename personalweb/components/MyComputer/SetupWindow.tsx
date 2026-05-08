@@ -12,12 +12,12 @@ export default function SetupWindow({ data }: SetupWindowInterface) {
       <div>
         <AddressBar address="My Computer" />
         <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-          {data.map((folder) => (
+          {data.map(({ folderName, items, icon }) => (
             <DesktopItem
-              key={folder.folderName}
-              icon={folder.icon}
-              iconHeading={`${folder.folderName}`}
-              iconSubHeading={folder.items}
+              key={folderName}
+              icon={icon}
+              iconHeading={`${folderName}`}
+              iconSubHeading={items}
             />
           ))}
         </div>

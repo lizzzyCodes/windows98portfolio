@@ -11,13 +11,13 @@ export default function DesktopLayout() {
   return (
     <>
       <div className={styles.desktop}>
-        {desktopIcons.map((icon) => (
+        {desktopIcons.map(({ type, folderName, icon }) => (
           <DesktopItem
-            key={icon.folderName}
-            icon={icon.icon}
-            iconHeading={`${icon.folderName}`}
+            key={folderName}
+            icon={icon}
+            iconHeading={`${folderName}`}
             onClick={() => {
-              openWindow(icon.type);
+              openWindow(type);
             }}
           />
         ))}

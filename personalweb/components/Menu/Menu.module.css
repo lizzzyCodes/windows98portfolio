@@ -16,15 +16,16 @@
   }
 
   .divider {
+    border-top: 1px solid white;
     border-bottom: 1px solid #f5a8d0;
-    margin: 0 5px;
+    margin: 4px 5px;
   }
   
   .items {
     display: flex;
     flex-direction: column;
   }
-  
+
   .menuItem {
     all: unset;
     box-sizing: border-box;
