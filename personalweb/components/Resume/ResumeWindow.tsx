@@ -1,5 +1,5 @@
 // TODO: to be deleted
-import MenuBar from "../MenuBar/MenuBar";
+import MenuBar from "../WindowMenuBar/MenuBar";
 import styles from "../Resume/Resume.module.css";
 import { SectionHeader } from "./SectionHeader";
 import { ExperienceHeader } from "./ExperienceHeader";

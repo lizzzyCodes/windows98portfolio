@@ -1,17 +1,6 @@
 import Image from "next/image";
 import styles from "../Menu/Menu.module.css";
-
-interface MenuItem {
-  label: string;
-  icon: string;
-}
-
-const MENU_ITEMS: MenuItem[] = [
-  { label: "Resume", icon: "/icon/Resume.jpg" },
-  { label: "Projects", icon: "/icon/Resume.jpg" },
-  { label: "About Me", icon: "/icon/Resume.jpg" },
-  { label: "Music", icon: "/icon/cd.png" },
-];
+import { desktopIcons } from "@/app/src/data/data";
 
 export default function Menu() {
   return (
@@ -21,10 +10,12 @@ export default function Menu() {
       </div>
       <div className={styles.divider}></div>
       <div className={styles.items}>
-        {MENU_ITEMS.map(({ label, icon }) => (
-          <button key={label} className={styles.menuItem}>
-            {icon && <Image src={icon} width={20} height={20} alt={label} />}
-            {label}
+        {desktopIcons.map(({ folderName, icon }) => (
+          <button key={folderName} className={styles.menuItem}>
+            {icon && (
+              <Image src={icon} width={20} height={20} alt={folderName} />
+            )}
+            {folderName}
           </button>
         ))}
       </div>

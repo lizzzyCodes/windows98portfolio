@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
+import styles from "./Loading.module.css";
 import { TARGET_PERCENT, INCREMENT, INTERVAL_MS } from "./constants";
-
+// TODO: pdate the styles
 export default function LoadingBar() {
   const [progress, setProgress] = React.useState(0);
 

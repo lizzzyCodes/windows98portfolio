@@ -1,5 +1,5 @@
 import styles from "./Resume.module.css";
-import MenuBar from "../MenuBar/MenuBar";
+import MenuBar from "../WindowMenuBar/MenuBar";
 import { SectionHeader } from "./SectionHeader";
 import { ResumeHeader } from "./ResumeHeader";
 import { Dates } from "./Dates";
