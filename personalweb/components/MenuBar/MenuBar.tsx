@@ -1,5 +1,5 @@
 import styles from "../MenuBar/MenuBar.module.css";
-
+// TODO: make sure for tabs your remove the blue backgroud color and add the download PDF version
 const TAB_ITEMS = ["File", "Edit", "Format", "Help", "Download PDF"];
 
 export default function MenuBar() {

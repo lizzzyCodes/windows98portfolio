@@ -2,9 +2,10 @@
 import { folders } from "@/app/src/data/data";
 import MusicWindow from "../MusicWindow/MusicWindow";
 import About from "../About/About";
-import ResumeWindow from "../Resume/ResumeWindow";
+// import ResumeWindow from "../Resume/ResumeWindow"; // TODO: delete soon pls
 import SetupWindow from "../MyComputer/SetupWindow";
 import ConnectWindow from "../Connect/ConnectWindow";
+import Resume from "../Resume/Resume";
 
 type WindowRegistryEntry = {
   title: string;
@@ -22,8 +23,8 @@ export const windowRegistry: Record<string, WindowRegistryEntry> = {
   },
   resume: {
     title: "Resume.txt - Notepad",
-    width: 800,
-    component: <ResumeWindow />,
+    width: 900,
+    component: <Resume />,
   },
   connect: { title: "Let's Connect", component: <ConnectWindow /> },
 };

@@ -3,18 +3,25 @@
     background: #FFFEF7;
     color: #2C1B24;
     padding: 20px;
-    font-size: 21px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 2;
     min-height: 600px;
     max-height: 600px;
     overflow-y: auto;
     border: 2px solid #8B6B7A;
     white-space: pre-wrap;
+    font-weight: bold
+}
+.resumeNameContainer {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .resumeName {
     color: #000000;
-    font-weight: bold;   
+    font-weight: bold;
+    letter-spacing: 2px;
+
 }
 
 .experienceHeading {
@@ -63,7 +70,7 @@
   }
 
   /* Blinking cursor */
-  .cursor {
+.cursor {
     display: inline-block;
     width: 8px;
     height: 16px;
@@ -80,3 +87,46 @@
         opacity: 0; 
     }
 }
+
+.bullet {
+    color: #E09ABE
+}
+
+.contactInfoBox {
+    text-align: center;
+}
+
+.styleBar {
+    background: #F4C6D3;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-top: 2px solid #E09ABE;
+    font-size: 12px;
+}
+.statusSection {
+    display: flex;
+    gap: 20px;
+}
+
+.techStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.techRow {
+  grid-template-columns: 180px 1fr;
+}
+
+.category {
+  font-weight: bold;
+  color: #a8518a;
+  padding-right: 10px;
+}
+
+.skills {
+  line-height: 1.5;
+}
+
+

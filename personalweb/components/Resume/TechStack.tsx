@@ -11,12 +11,13 @@ interface TechStackProps {
 }
 
 export const TechStack = ({ data }: TechStackProps) => (
-  <>
-    {data.map((item, index) => (
-      <React.Fragment key={index}>
+  <div className={styles.techStack}>
+    {data.map((item) => (
+      <div key={item.category} className={styles.techRow}>
         <span className={styles.category}>{item.category}:</span>
-        <span>{item.skills}</span>
-      </React.Fragment>
+
+        <span className={styles.skills}>{item.skills}</span>
+      </div>
     ))}
-  </>
+  </div>
 );

@@ -17,12 +17,13 @@ import { ExperienceHeader } from "./ExperienceHeader";
 const Resume = () => {
   return (
     <>
-      <Window>
-        <MenuBar />
-        <div className={styles.textArea}>
+      <div className={styles.textArea}>
+        <div className={styles.resumeNameContainer}>
           <span className={styles.resumeName}>
             {socialLinks.name.toUpperCase()}
           </span>
+        </div>
+        <div className={styles.contactInfoBox}>
           <ContactInfo
             role={socialLinks.role.toUpperCase()}
             location={socialLinks.location}
@@ -30,36 +31,60 @@ const Resume = () => {
             linkedIn={socialLinks.linkedIn}
             github={socialLinks.github}
           />
-          <Divider variant="double" />
-          <SectionHeader header="experience" />
-
-          <ExperienceHeader header="Oracle" subHeading={socialLinks.role} />
-          <Dates
-            dates={experience.Oracle.dates}
-            location={experience.Oracle.location}
-          />
-          <div>
-            <Experience data={experience.Oracle.bullets} />
-          </div>
-          <Divider />
-          <ExperienceHeader header="PayPal" subHeading={socialLinks.role} />
-          <Dates
-            dates={experience.PayPal.dates}
-            location={experience.PayPal.location}
-          />
-          <Experience data={experience.PayPal.bullets} />
-          <Divider />
-          <ExperienceHeader header="PayPal" subHeading={socialLinks.role} />
-          <Dates
-            dates={experience.PayPalInternship.dates}
-            location={experience.PayPalInternship.location}
-          />
-          <Experience data={experience.PayPalInternship.bullets} />
-          <Divider variant="double" />
-          <span className={styles.cursor}></span>
         </div>
+
+        <Divider variant="double" />
+
+        <TechStack data={techStackData} />
+        <Divider />
+        <SectionHeader header="experience" />
+        {/**  Experience 1 */}
+        <ExperienceHeader header="Oracle" subHeading={socialLinks.role} />
+        <Dates
+          dates={experience.Oracle.dates}
+          location={experience.Oracle.location}
+        />
+        <div>
+          <Experience data={experience.Oracle.bullets} />
+        </div>
+        <Divider />
+        {/**  Experience 2 */}
+        <ExperienceHeader header="PayPal" subHeading={socialLinks.role} />
+        <Dates
+          dates={experience.PayPal.dates}
+          location={experience.PayPal.location}
+        />
+        <div>
+          <Experience data={experience.PayPal.bullets} />
+        </div>
+        <Divider />
+        {/**  Experience 3 */}
+        <ExperienceHeader header="PayPal" subHeading={socialLinks.role} />
+        <Dates
+          dates={experience.PayPalInternship.dates}
+          location={experience.PayPalInternship.location}
+        />
+        <div>
+          <Experience data={experience.PayPalInternship.bullets} />
+        </div>
+        <Divider />
+        <SectionHeader header="Education" />
+        {/**  Experience 1 */}
+        <ExperienceHeader header={experience.Education.location} />
+        <Dates
+          dates={experience.Education.dates}
+          location={experience.Education.role}
+        />
+        <span className={styles.cursor}></span>
+      </div>
+      <div className={styles.styleBar}>
         <StatusBar footerText="Line 58, Col 15" />
-      </Window>
+        <div className={styles.statusSection}>
+          <StatusBar footerText="100%" />
+          <StatusBar footerText="Windows (CRLF)" />
+          <StatusBar footerText="UTF-8" />
+        </div>
+      </div>
     </>
   );
 };

@@ -31,16 +31,20 @@ export const desktopIcons = [
 export const techStackData = [
   {
     category: "Languages",
-    skills: "JavaScript (ES6+), TypeScript, Python, SQL, HTML5, CSS3, Java",
+    skills: "TypeScript, JavaScript (ES6+), Python, SQL, Java",
   },
   {
     category: "Frontend",
-    skills: "React, Redux, Next.js, Storybook, Tailwind CSS, Webpack, MUI",
+    skills: "React, Next.js, Redux, Tailwind CSS, MUI",
   },
-  { category: "Backend", skills: "Node.js, REST APIs, GraphQL" },
   {
-    category: "Cloud & DevOps",
-    skills: "OCI, CI/CD, Jenkins",
+    category: "Backend & APIs",
+    skills: "Node.js, REST APIs, GraphQL",
+  },
+  {
+    category: "Data & Spatial Systems",
+    skills:
+      "GIS, Mapbox, Pandas, NumPy, Spatial Data Analysis, Data Visualization",
   },
   {
     category: "Testing",
@@ -48,12 +52,12 @@ export const techStackData = [
       "Jest, Mocha, React Testing Library, WebdriverIO, BrowserStack, TDD",
   },
   {
-    category: "Observability",
-    skills: "Splunk, Grafana, On-Call Incident Response",
+    category: "Cloud & Infra",
+    skills: "OCI, CI/CD, Jenkins, Grafana, Splunk",
   },
   {
-    category: "Other",
-    skills: "Git, Version Control ",
+    category: "Developer Tools",
+    skills: "Git, Version Control, Webpack",
   },
 ];
 
@@ -89,10 +93,10 @@ export const connectLinks = [
 ];
 
 type JobEntry = {
-  role: string;
   dates: string;
-  bullets: string[];
-  location: string;
+  role?: string;
+  bullets?: string[];
+  location?: string;
 };
 
 export const experience: Record<string, JobEntry> = {
@@ -104,7 +108,6 @@ export const experience: Record<string, JobEntry> = {
       "Co-owned 3 core repositories including the DevOps Portal UI serving ~30,000 internal users. ",
       "Rebuilt a legacy log viewer handling ~800 daily builds replacing legacy implementation with a virtualized table reducing load times from 5 minutes to ~2 seconds using React/TypeScript. Shipped under strict TDD with Jest and React Testing Library.",
       "Built and shipped a reusable CSV/JSON export component for DevOps component library adopted across the OCI engineering org. Designed a V2 with polling logic for backend-paginated datasets. Authored Storybook documentation and added unit test coverage with Jest.",
-      "Developed a proof of concept using Cucumber to enable AI agent-driven integration testing. Validated the end-to-end approach using a stub HTML page laying groundwork for automated test infrastructure.",
       "Independently migrated the Source Control Management team from a monolithic repo to an independent plugin, migrating ~50 files and creating Terraform infrastructure for sandbox and production environments.",
       "Implemented a feature flag to transition ~2,000 users off a legacy API. Collaborated cross-functionally with the CI/CD validating behavior in staging and deployment. ",
       "Accelerated feature delivery by applying AI assisted development tools including Cline and OpenAI Codex in day-to-day work.",
@@ -135,5 +138,10 @@ export const experience: Record<string, JobEntry> = {
       "Communicated and collaborated with designers and product manager to iterate on existing designs, get feedback on designs and define new features.",
       "Developed button designs using React and documented code changes on Confluence in order to use in upcoming A/B experiments.",
     ],
+  },
+  Education: {
+    role: "Bachelor of Arts, Geographic Information Systems with Data Science",
+    location: "University of Washington",
+    dates: "June 2022",
   },
 };
