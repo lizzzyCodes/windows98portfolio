@@ -37,8 +37,25 @@
     color: #8B6B7A
 }
 
-.dashes {
-    color: #E09ABE;
+
+
+.divider {
+  color: #E09ABE;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .divider {
+    font-size: 0;
+    border-bottom: 2px var(--border-style) #E09ABE;
+    line-height: 0;
+  }
+
+  .divider[data-variant="double"] {
+    border-bottom-width: 3px;
+  }
 }
 
 .jobDate {
@@ -97,7 +114,6 @@
 }
 
 .styleBar {
-    background: #F4C6D3;
     padding: 4px 8px;
     display: flex;
     justify-content: space-between;

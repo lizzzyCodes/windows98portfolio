@@ -1,5 +1,4 @@
 import styles from "./Resume.module.css";
-// TODO: fix this so it only wraps through the container only!
 type DividerVariant = "double" | "dashed" | "single";
 
 const CHAR_MAP: Record<DividerVariant, string> = {
@@ -10,12 +9,11 @@ const CHAR_MAP: Record<DividerVariant, string> = {
 
 interface DividerProps {
   variant?: DividerVariant;
-  className?: string;
 }
 
-export function Divider({ variant = "single", className }: DividerProps) {
+export function Divider({ variant = "single" }: DividerProps) {
   return (
-    <span className={styles.dashes} aria-hidden="true">
+    <span className={styles.divider} aria-hidden="true">
       {CHAR_MAP[variant].repeat(200)}
     </span>
   );
