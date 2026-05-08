@@ -6,7 +6,6 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
   const [windows, setWindows] = React.useState([]);
 
   const openWindow = (type: string) => {
-    console.log("working? [ec]");
     setWindows((prev) => [
       ...prev,
       {

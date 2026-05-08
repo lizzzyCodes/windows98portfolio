@@ -1,8 +1,8 @@
-import Window from "../Window/Window";
+// TODO: to be deleted
 import MenuBar from "../MenuBar/MenuBar";
 import styles from "../Resume/Resume.module.css";
 import { SectionHeader } from "./SectionHeader";
-import { ResumeHeader } from "./ExperienceHeader";
+import { ExperienceHeader } from "./ExperienceHeader";
 import { Dates } from "./Dates";
 import { Experience } from "./Experience";
 import { techStackData } from "@/app/src/data/data";
@@ -10,11 +10,13 @@ import { TechStack } from "./TechStack";
 import { Divider } from "./Divider";
 import { ContactInfo } from "./ContactInfo";
 import ResumeSection from "./ResumeSection";
+import { socialLinks } from "@/app/src/data/data";
+import StatusBar from "../StatusBar/StatusBar";
 
 //TODO: update the colors of the scroll bar, update the css and break up the components
 const ResumeWindow = () => {
   return (
-    <Window title="Resume.txt - Notepad" width={800}>
+    <>
       <MenuBar />
       <div className={`window-body ${styles.windowBody}`}>
         <div className={styles.textArea}>
@@ -24,7 +26,9 @@ const ResumeWindow = () => {
             </span>
             {"\n"}
 
-            <span className={styles.name}>ELIZABETH CASTILLO</span>
+            <span className={styles.name}>
+              {socialLinks.name.toUpperCase()}
+            </span>
 
             {"\n"}
             <span className={styles.asciiBorder}>
@@ -32,16 +36,18 @@ const ResumeWindow = () => {
             </span>
           </div>
           <div className="Contact Info Container">
-            <span className={styles.title}>SOFTWARE ENGINEER</span>
-            <ContactInfo
-              location="New York, NY"
-              email="castieelizabeth896@gmail.com"
-              linkedIn="www.linkedin.com/in/elizabeth-castillo-"
-              github="lizzzyCodes"
-            />
+            <div className={styles.contactInfoContainer}>
+              <span className={styles.title}>{socialLinks.role} </span>
+              <ContactInfo
+                location={socialLinks.location}
+                email={socialLinks.email}
+                linkedIn={socialLinks.linkedIn}
+                github={socialLinks.github}
+              />
+            </div>
           </div>
           <ResumeSection header="EXPERIENCE">
-            <ResumeHeader header="Oracle" subHeading="Software Engineer" />
+            <ExperienceHeader header="Oracle" subHeading="Software Engineer" />
             <Dates dates="January 2025 - Current" location="Hybrid" />
             <Experience
               data={[
@@ -58,7 +64,7 @@ const ResumeWindow = () => {
           </ResumeSection>
 
           <ResumeSection>
-            <ResumeHeader header="PayPal" subHeading="Software Engineer" />
+            <ExperienceHeader header="PayPal" subHeading="Software Engineer" />
             <Dates dates="January 2022 - March 2023" location="Hybrid" />
             <Experience
               data={[
@@ -76,7 +82,7 @@ const ResumeWindow = () => {
           <Divider variant="single" />
           <SectionHeader header="EDUCATION" />
           <Divider variant="dashed" />
-          <ResumeHeader
+          <ExperienceHeader
             header="UNIVERSITY OF WASHINGTON "
             subHeading="Bachelor of Arts, Data Science"
           />
@@ -96,17 +102,7 @@ const ResumeWindow = () => {
           <Divider variant="single" />
           <SectionHeader header="PROJECTS" />
           <Divider variant="dashed" />
-          <ResumeHeader header="BUDGET TRACKER WEB APP" />
-          <Experience
-            bulletStyle="•"
-            data={[
-              "Utilized PayPal's internal tracking and analytics system to capture and log web traffic to be accessed on Looker using JavaScript",
-              "Implemented a proactive approach to software quality by integrating unit test(s) using Jest or Mocha into every pull request creation",
-              "Created and ramped A/B experiments utilizing in-house experimentation platform",
-              "Performed rigorous accessibility testing on new integrations, utilizing WAVE, Lighthouse, and Screen Readers to ensure an inclusive user experience",
-            ]}
-          />
-          <ResumeHeader header="RECIPE FINDER" />
+          <ExperienceHeader header="BUDGET TRACKER WEB APP" />
           <Experience
             bulletStyle="•"
             data={[
@@ -120,7 +116,8 @@ const ResumeWindow = () => {
           <span className={styles.cursor}></span>
         </div>
       </div>
-    </Window>
+      <StatusBar footerText="Line 58, Col 15" />
+    </>
   );
 };
 

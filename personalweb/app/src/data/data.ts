@@ -58,9 +58,13 @@ export const techStackData = [
 ];
 
 export const socialLinks = {
-  github: "https://github.com/yourhandle",
-  linkedIn: "https://linkedin.com/in/yourhandle",
+  github: "lizzzyCodes",
+  linkedIn: "www.linkedin.com/in/elizabeth-castillo-",
   calendly: "https://calendly.com/ecastillooo/coffee-chat",
+  email: "castieelizabeth896@gmail.com",
+  location: "New York, NY",
+  name: "Elizabeth Castillo",
+  role: "Software Engineer",
 };
 
 export const connectLinks = [
@@ -83,3 +87,53 @@ export const connectLinks = [
     description: "Calendly link",
   },
 ];
+
+type JobEntry = {
+  role: string;
+  dates: string;
+  bullets: string[];
+  location: string;
+};
+
+export const experience: Record<string, JobEntry> = {
+  Oracle: {
+    role: "Software Engineer",
+    location: "Seattle, WA",
+    dates: "January 2025 - Current",
+    bullets: [
+      "Co-owned 3 core repositories including the DevOps Portal UI serving ~30,000 internal users. ",
+      "Rebuilt a legacy log viewer handling ~800 daily builds replacing legacy implementation with a virtualized table reducing load times from 5 minutes to ~2 seconds using React/TypeScript. Shipped under strict TDD with Jest and React Testing Library.",
+      "Built and shipped a reusable CSV/JSON export component for DevOps component library adopted across the OCI engineering org. Designed a V2 with polling logic for backend-paginated datasets. Authored Storybook documentation and added unit test coverage with Jest.",
+      "Developed a proof of concept using Cucumber to enable AI agent-driven integration testing. Validated the end-to-end approach using a stub HTML page laying groundwork for automated test infrastructure.",
+      "Independently migrated the Source Control Management team from a monolithic repo to an independent plugin, migrating ~50 files and creating Terraform infrastructure for sandbox and production environments.",
+      "Implemented a feature flag to transition ~2,000 users off a legacy API. Collaborated cross-functionally with the CI/CD validating behavior in staging and deployment. ",
+      "Accelerated feature delivery by applying AI assisted development tools including Cline and OpenAI Codex in day-to-day work.",
+      "Owned on-call responsibilities including production deployments, Terraform bucket creation(s), Grafana monitoring, and Jira triage; hosted office hours to support plugin development teams and managed team Slack channels.",
+    ],
+  },
+  PayPal: {
+    role: "Software Engineer",
+    location: "Chicago, IL",
+    dates: "September 2022 – March 2024",
+    bullets: [
+      "Implemented a new eligibility and redirection feature in the router layer using JavaScript and SSR, reducing checkout latency by ~3 seconds for 45% of checkout to enhance the checkout platform, covered by a full test suite.",
+      "Developed a proof of concept using the Apollo Server  plugin to cache GraphQL responses within the mid-tier layer using JavaScript.",
+      "Increased test coverage by 90% using Mocha and test-driven development ensuring the functionality and accuracy of new product features to meet Q1 goals.",
+      "Developed and maintained over 15+ observability dashboards using Splunk to detect and investigate root cause of problems in production quickly.",
+      "Designed, developed and maintained automated test suites with over 20 tests for a new checkout route using Object-Oriented Design Principles, BrowserStack, and WebdriverIO. This effort increased code coverage and automation metrics as part of Q2 goals.",
+      "Collaborated with the external BrowserStack team to develop the first iOS automated test with Apple Pay wallet integration kickstarting Apple Pay testing to ensure seamless functionality on mobile platforms and increasing our automation testing as part of Q2 goals.",
+      "Experienced in an Agile environment, contributing to daily scrum meetings, providing technical input on planning, design and requirements for new features, reviewing and providing feedback on PRs, maintaining detailed documentation, providing estimates during story grooming sessions, and leading retrospectives.",
+    ],
+  },
+  PayPalInternship: {
+    role: "Software Engineer",
+    location: "Hybrid",
+    dates: "June 2021 – September 2021",
+    bullets: [
+      "Conducted comprehensive research on SharpR, analyzing click rates and benchmarking against industry competitors.",
+      "Designed UX prototypes to enhance button click rates based on research data using Figma.",
+      "Communicated and collaborated with designers and product manager to iterate on existing designs, get feedback on designs and define new features.",
+      "Developed button designs using React and documented code changes on Confluence in order to use in upcoming A/B experiments.",
+    ],
+  },
+};

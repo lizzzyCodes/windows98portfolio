@@ -16,11 +16,7 @@ export default function DesktopLayout() {
             key={icon.folderName}
             icon={icon.icon}
             iconHeading={`${icon.folderName}`}
-            //   onClick={() => openWindow(icon.folderName)}
             onClick={() => {
-              console.log("windows", windows);
-              console.log("registry keys", Object.keys(windowRegistry));
-              console.log("icon clicked working", icon.folderName);
               openWindow(icon.type);
             }}
           />
@@ -28,12 +24,17 @@ export default function DesktopLayout() {
       </div>
       {/* Open windows — type is the key into windowRegistry */}
       {windows.map((entry) => {
-        const content = windowRegistry[entry.type];
-        if (!content) return null; // unknown type, skip silently
+        const registered = windowRegistry[entry.type];
+        if (!registered) return null;
 
         return (
-          <Window key={entry.id} entry={entry} title={entry.type}>
-            {content}
+          <Window
+            key={entry.id}
+            entry={entry}
+            title={registered.title}
+            width={registered.width}
+          >
+            {registered.component}
           </Window>
         );
       })}

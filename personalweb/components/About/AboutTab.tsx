@@ -11,7 +11,7 @@ const AboutTab = () => {
           <Image src="/images/deftones.jpg" fill alt="deftones album cover" />
         </div>
 
-        <p className={styles.heading}>Elizabeth Castillo</p>
+        <p className={styles.heading}>{socialLinks.name}</p>
         <p>
           I'm a software engineer with a background in data science (Python, ML)
           and love front-end development.

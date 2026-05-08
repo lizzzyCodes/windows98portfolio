@@ -28,7 +28,7 @@ export default function About() {
   const [activeTab, setActiveTab] = React.useState<Tab>("about");
 
   return (
-    <Window title="whoami">
+    <>
       <div className="window-body">
         <menu role="tablist">
           {TABS.map((tab) => (
@@ -52,6 +52,6 @@ export default function About() {
       <StatusBar
         footerText={activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
       />
-    </Window>
+    </>
   );
 }

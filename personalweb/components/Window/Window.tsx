@@ -13,14 +13,6 @@ interface WindowProps {
   children: React.ReactNode;
   width?: number;
 }
-/*interface WindowProps {
-  title: string;
-  width?: number;
-  onMinimize?: () => void;
-  onMaximize?: () => void;
-  onClose?: () => void;
-  children: React.ReactNode;
-} */
 
 export default function Window({ entry, title, width, children }: WindowProps) {
   const { closeWindow, minimizeWindow, maximizeWindow } = useDesktop();

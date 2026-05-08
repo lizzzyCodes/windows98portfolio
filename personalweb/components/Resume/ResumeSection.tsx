@@ -5,7 +5,7 @@ interface ResumeSectionProps {
   header?: string;
   children: React.ReactNode;
 }
-
+// TODO: BE DELETED
 const ResumeSection = ({ header, children }: ResumeSectionProps) => {
   return (
     <>
