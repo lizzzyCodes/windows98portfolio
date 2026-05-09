@@ -1,11 +1,10 @@
 interface StatusBarProps {
   footerText: string;
-  width?: number;
 }
 
-const StatusBar = ({ footerText, width }: StatusBarProps) => {
+const StatusBar = ({ footerText }: StatusBarProps) => {
   return (
-    <div className="field-border" style={{ padding: "8px", width: width }}>
+    <div className="field-border" style={{ padding: "8px" }}>
       {footerText}
     </div>
   );

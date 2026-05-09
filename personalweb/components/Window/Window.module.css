@@ -1,0 +1,9 @@
+.desktopWindow {
+    width: var(--window-width, auto);
+  }
+  
+  @media (max-width: 600px) {
+    .desktopWindow {
+      width: 100%;
+    }
+  }

@@ -1,7 +1,6 @@
-import Window from "../Window/Window";
 import Image from "next/image";
-
-export default function MusicWindow() {
+import styles from "./Music.module.css";
+/* export default function MusicWindow() {
   return (
     <div style={{ display: "flex", gap: "12px" }}>
       <div style={{ flexShrink: 0 }}>
@@ -19,6 +18,7 @@ export default function MusicWindow() {
           display: "flex",
           flexDirection: "column",
           gap: "4px",
+          minWidth: 0,
         }}
       >
         <div className="field-row">
@@ -42,6 +42,50 @@ export default function MusicWindow() {
           <button aria-label="Fast Forward">⏩</button>
           <button aria-label="Play">▶</button>
           <button aria-label="Stop">⏹</button>
+        </div>
+      </div>
+    </div>
+  );
+} */
+
+export default function MusicWindow() {
+  return (
+    <div style={{ display: "flex" }}>
+      <Image
+        src="/images/deftones.jpg"
+        width={100}
+        height={100}
+        alt="deftones album cover"
+      />
+      <div className={styles.dropdownContainer}>
+        <div className="field-row">
+          <label className={styles.label}>Artist:</label>
+          <select className={styles.dropdownSelect}>
+            <option>Deftones</option>
+          </select>
+        </div>
+
+        <div className="field-row">
+          <label className={styles.label}>Track:</label>
+          <select className={styles.dropdownSelect}>
+            <option>Be Quiet And Drive(Far Away)</option>
+          </select>
+        </div>
+
+        <div className={styles.volumeContainer}>
+          <input type="range" min="0" max="100" value="25" />
+        </div>
+        <div className={styles.buttonsContainer}>
+          <div className={styles.buttons}>
+            <button aria-label="Rewind" disabled>
+              ◀◀
+            </button>
+            <button aria-label="Play">▶</button>
+            <button aria-label="Stop">⏹</button>
+            <button aria-label="Fast Forward" disabled>
+              ▶▶
+            </button>
+          </div>
         </div>
       </div>
     </div>

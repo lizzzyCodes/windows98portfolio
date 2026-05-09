@@ -10,7 +10,7 @@ export const BackgroundTab = () => {
         stacked against you. I want to help build belonging and resilience in
         communities that need it most. When I'm not coding or mentoring, you can
         find me running, weightlifting, hunting for new coffee shops, or
-        training for my next run."
+        training for my next run.
       </div>
     </>
   );

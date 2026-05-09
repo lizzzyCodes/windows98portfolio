@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./About.module.css";
 import ButtonWithLogo from "../Buttons/ButtonWithLogo";
-import { socialLinks } from "@/app/src/data/data";
+import { socialLinks, aboutData } from "@/app/src/data/data";
 
 const AboutTab = () => {
   return (
@@ -12,10 +12,7 @@ const AboutTab = () => {
         </div>
 
         <p className={styles.heading}>{socialLinks.name}</p>
-        <p>
-          I'm a software engineer with a background in data science (Python, ML)
-          and love front-end development.
-        </p>
+        <p>{aboutData.about}</p>
         <a
           href={socialLinks.linkedIn}
           target="_blank"

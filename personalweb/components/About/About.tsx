@@ -1,6 +1,5 @@
 import React from "react";
 import StatusBar from "../StatusBar/StatusBar";
-import Window from "../Window/Window";
 import { BackgroundTab } from "./BackgroundTab";
 import MentorshipTab from "./MentorshipTab";
 import AboutTab from "./AboutTab";

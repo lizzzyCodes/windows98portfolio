@@ -28,6 +28,11 @@ export const desktopIcons = [
   { folderName: "Outlook", type: "connect", icon: "/icon/email.png" },
 ];
 
+export const aboutData = {
+  about:
+    "Climate-focused software engineer specializing in frontend/mobile systems, energy platforms, and spatial/data-driven applications.",
+};
+
 export const techStackData = [
   {
     category: "Languages",
@@ -63,7 +68,7 @@ export const techStackData = [
 
 export const socialLinks = {
   github: "lizzzyCodes",
-  linkedIn: "www.linkedin.com/in/elizabeth-castillo-",
+  linkedIn: "https://www.linkedin.com/in/elizabeth-castillo-",
   calendly: "https://calendly.com/ecastillooo/coffee-chat",
   email: "castieelizabeth896@gmail.com",
   location: "New York, NY",
