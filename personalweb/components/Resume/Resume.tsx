@@ -1,7 +1,6 @@
 import styles from "./Resume.module.css";
-import MenuBar from "../WindowMenuBar/MenuBar";
+import { TabBar } from "../WindowMenuBar/MenuBar";
 import { SectionHeader } from "./SectionHeader";
-import { ResumeHeader } from "./ResumeHeader";
 import { Dates } from "./Dates";
 import { Experience } from "./Experience";
 import { techStackData } from "@/app/src/data/data";
@@ -10,13 +9,13 @@ import { Divider } from "./Divider";
 import { ContactInfo } from "./ContactInfo";
 import { socialLinks, experience } from "@/app/src/data/data";
 import StatusBar from "../StatusBar/StatusBar";
-import Window from "../Window/Window";
 import { ExperienceHeader } from "./ExperienceHeader";
 
 //TODO: update the colors of the scroll bar, update the css and break up the components
 const Resume = () => {
   return (
     <>
+      <TabBar />
       <div className={styles.textArea}>
         <div className={styles.resumeNameContainer}>
           <span className={styles.resumeName}>

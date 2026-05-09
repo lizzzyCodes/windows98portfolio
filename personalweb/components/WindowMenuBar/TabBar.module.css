@@ -1,5 +1,5 @@
 .items {
-  background-color: lightblue; /*TODO: CHANGE THE color to something better*/
+ /*TODO: CHANGE THE color to something better*/
   display: flex;
   flex: 0 0 auto;
   gap: 0;
@@ -19,9 +19,18 @@
   font-size: 13px;
 }
 
-.menuItem:hover {
+.menuItemActive {
+  composes: menuItem;
+  cursor: pointer;
+}
+
+.menuItemActive:hover {
   background: #f5a8d0;
 }
+
+/*.menuItem:hover {
+  background: #f5a8d0;
+} */
 
 .menuItem:focus-visible {
   outline: 1px dotted #2c1b24;
