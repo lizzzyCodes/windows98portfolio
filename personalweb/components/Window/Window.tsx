@@ -8,6 +8,8 @@ export type WindowInstance = {
   minimized: boolean;
   maximized: boolean; // add the max boolean
   zIndex: number;
+  x: number;
+  y: number;
 };
 
 interface WindowProps {
@@ -19,13 +21,16 @@ interface WindowProps {
 }
 
 export default function Window({ entry, title, width, children }: WindowProps) {
-  const { closeWindow, minimizeWindow, maximizeWindow } = useDesktop();
+  const { closeWindow, minimizeWindow, maximizeWindow, focusWindow } =
+    useDesktop();
   // if (entry.minimized) return null;
   const style: React.CSSProperties &
     Record<string, string | number | undefined> = {
     "--window-width": width ? `${width}px` : undefined,
+    "--window-left": `calc(50% - ${(width ?? 400) / 2}px)`,
+    "--window-top": `${entry.y}px`,
+    zIndex: entry.zIndex,
   };
-
   const windowClass = [
     "window",
     styles.desktopWindow,
@@ -35,7 +40,11 @@ export default function Window({ entry, title, width, children }: WindowProps) {
     .join(" ");
 
   return (
-    <div style={style} className={`window ${styles.desktopWindow}`}>
+    <div
+      style={style}
+      className={`window ${styles.desktopWindow}`}
+      onMouseDown={() => focusWindow(entry.id)}
+    >
       <div className="title-bar">
         <div className="title-bar-text">{title}</div>
         <div className="title-bar-controls">
@@ -47,7 +56,14 @@ export default function Window({ entry, title, width, children }: WindowProps) {
             aria-label="Maximize"
             onClick={() => maximizeWindow(entry.id)}
           /> */}
-          <button aria-label="Close" onClick={() => closeWindow(entry.id)} />
+          <button
+            aria-label="Close"
+            onMouseDown={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              closeWindow(entry.id);
+            }}
+          />
         </div>
       </div>
       <div className="window-body">{children}</div>

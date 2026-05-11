@@ -1,9 +1,16 @@
 .desktopWindow {
-    width: var(--window-width, auto);
+  position: absolute;
+  width: var(--window-width, auto);
+  left: var(--window-left);
+  top: var(--window-top);
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  .desktopWindow {
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
-  @media (max-width: 600px) {
-    .desktopWindow {
-      width: 100%;
-    }
-  }
+}

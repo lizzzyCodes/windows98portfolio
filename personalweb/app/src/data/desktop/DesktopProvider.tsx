@@ -1,20 +1,49 @@
 "use client";
 import React from "react";
+import { WindowInstance } from "@/components/Window/Window";
 import { DesktopContext } from "./DesktopContext";
 
 export function DesktopProvider({ children }: { children: React.ReactNode }) {
-  const [windows, setWindows] = React.useState([]);
+  const [windows, setWindows] = React.useState<WindowInstance[]>([]);
+  const [topZIndex, setTopZIndex] = React.useState(1);
 
   const openWindow = (type: string) => {
-    setWindows((prev) => [
-      ...prev,
-      {
-        id: crypto.randomUUID(),
-        type,
-        minimized: false,
-        isMaximized: false,
-      },
-    ]);
+    setTopZIndex((prev) => {
+      const nextZIndex = prev + 1;
+
+      setWindows((prevWindow) => [
+        ...prevWindow,
+        {
+          id: crypto.randomUUID(),
+          type,
+          minimized: false,
+          isMaximized: false,
+          zIndex: nextZIndex,
+          x: 120,
+          y: 80,
+        },
+      ]);
+      return nextZIndex;
+    });
+  };
+
+  const focusWindow = (id: string) => {
+    setTopZIndex((prev) => {
+      const nextZIndex = prev + 1;
+
+      setWindows((prevWindows) =>
+        prevWindows.map((window) =>
+          window.id === id
+            ? {
+                ...window,
+                zIndex: nextZIndex,
+              }
+            : window
+        )
+      );
+
+      return nextZIndex;
+    });
   };
 
   const closeWindow = (id: string) => {
@@ -38,6 +67,7 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
       value={{
         windows,
         openWindow,
+        focusWindow,
         closeWindow,
         minimizeWindow,
         maximizeWindow,

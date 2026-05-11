@@ -1,17 +1,24 @@
-/*.desktop {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(auto-fill, 90px);
-    gap: 12px;
-    height: 100vh;
-    padding-bottom: 60px; /* slightly bigger than footer height 
-}*/
 
 .desktop {
-    display: flex;
+    position: relative;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+} 
+
+.desktopWindow {
+    pointer-events: auto;
+}
+
+.iconGrid {
     flex-wrap: wrap;
     gap: 16px;
     padding: 16px;
+}
+/* windows float on top */
+.windowLayer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
 }
 
 .folder {

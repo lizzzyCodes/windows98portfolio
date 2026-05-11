@@ -10,34 +10,39 @@ export default function DesktopLayout() {
   const { windows, openWindow } = useDesktop();
   return (
     <>
-      <div className={styles.desktop}>
-        {desktopIcons.map(({ type, folderName, icon }) => (
-          <DesktopItem
-            key={folderName}
-            icon={icon}
-            iconHeading={`${folderName}`}
-            onClick={() => {
-              openWindow(type);
-            }}
-          />
-        ))}
-      </div>
-      {/* Open windows — type is the key into windowRegistry */}
-      {windows.map((entry) => {
-        const registered = windowRegistry[entry.type];
-        if (!registered) return null;
+      <main className={styles.desktop}>
+        <section className={styles.iconGrid}>
+          {desktopIcons.map(({ type, folderName, icon }) => (
+            <DesktopItem
+              key={folderName}
+              icon={icon}
+              iconHeading={`${folderName}`}
+              onClick={() => {
+                openWindow(type);
+              }}
+            />
+          ))}
+        </section>
 
-        return (
-          <Window
-            key={entry.id}
-            entry={entry}
-            title={registered.title}
-            width={registered.width}
-          >
-            {registered.component}
-          </Window>
-        );
-      })}
+        {/* Open windows — type is the key into windowRegistry */}
+        <section className={styles.windowLayer}>
+          {windows.map((entry) => {
+            const registered = windowRegistry[entry.type];
+            if (!registered) return null;
+
+            return (
+              <Window
+                key={entry.id}
+                entry={entry}
+                title={registered.title}
+                width={registered.width}
+              >
+                {registered.component}
+              </Window>
+            );
+          })}
+        </section>
+      </main>
     </>
   );
 }

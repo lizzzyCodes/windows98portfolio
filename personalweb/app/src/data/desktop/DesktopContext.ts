@@ -8,6 +8,7 @@ interface DesktopContextType {
   closeWindow: (id: string) => void;
   minimizeWindow: (id: string) => void;
   maximizeWindow: (id: string) => void;
+  focusWindow: (id: string) => void;
 }
 
 export const DesktopContext = createContext<DesktopContextType | null>(null);
