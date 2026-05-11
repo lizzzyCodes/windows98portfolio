@@ -10,19 +10,28 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
   const openWindow = (type: string) => {
     setTopZIndex((prev) => {
       const nextZIndex = prev + 1;
-
-      setWindows((prevWindow) => [
-        ...prevWindow,
-        {
-          id: crypto.randomUUID(),
-          type,
-          minimized: false,
-          isMaximized: false,
-          zIndex: nextZIndex,
-          x: 120,
-          y: 80,
-        },
-      ]);
+      setWindows((prevWindows) => {
+        const existing = prevWindows.find((w) => w.type === type);
+        if (existing) {
+          return prevWindows.map((w) =>
+            w.id === existing.id
+              ? { ...w, zIndex: nextZIndex, minimized: false }
+              : w,
+          );
+        }
+        return [
+          ...prevWindows,
+          {
+            id: crypto.randomUUID(),
+            type,
+            minimized: false,
+            isMaximized: false,
+            zIndex: nextZIndex,
+            x: 120,
+            y: 80,
+          },
+        ];
+      });
       return nextZIndex;
     });
   };
