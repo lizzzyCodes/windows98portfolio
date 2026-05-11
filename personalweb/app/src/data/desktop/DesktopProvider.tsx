@@ -38,8 +38,8 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
                 ...window,
                 zIndex: nextZIndex,
               }
-            : window
-        )
+            : window,
+        ),
       );
 
       return nextZIndex;
@@ -52,13 +52,15 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
 
   const minimizeWindow = (id: string) => {
     setWindows((prev) =>
-      prev.map((w) => (w.id === id ? { ...w, minimized: !w.minimized } : w))
+      prev.map((w) => (w.id === id ? { ...w, minimized: !w.minimized } : w)),
     );
   };
 
   const maximizeWindow = (id: string) => {
     setWindows((prev) =>
-      prev.map((w) => (w.id === id ? { ...w, isMaximized: !w.isMaximized } : w))
+      prev.map((w) =>
+        w.id === id ? { ...w, isMaximized: !w.isMaximized } : w,
+      ),
     );
   };
 

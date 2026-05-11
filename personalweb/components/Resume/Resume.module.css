@@ -1,46 +1,43 @@
 .textArea {
-    font-family: 'Courier Prime', 'Courier New', monospace;
-    background: #FFFEF7;
-    color: #2C1B24;
-    padding: 20px;
-    font-size: 17px;
-    line-height: 2;
-    min-height: 600px;
-    max-height: 600px;
-    overflow-y: auto;
-    border: 2px solid #8B6B7A;
-    white-space: pre-wrap;
-    font-weight: bold
+  font-family: "Courier Prime", "Courier New", monospace;
+  background: #fffef7;
+  color: #2c1b24;
+  padding: 20px;
+  font-size: 17px;
+  line-height: 2;
+  min-height: 600px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 2px solid #8b6b7a;
+  white-space: pre-wrap;
+  font-weight: bold;
 }
 .resumeNameContainer {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .resumeName {
-    color: #000000;
-    font-weight: bold;
-    letter-spacing: 2px;
-
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .experienceHeading {
-    font-weight: bold;
-    color: #A8518A;
+  font-weight: bold;
+  color: #a8518a;
 }
 
 .experienceRole {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .contactInfoRole {
-    color: #8B6B7A
+  color: #8b6b7a;
 }
 
-
-
 .divider {
-  color: #E09ABE;
+  color: #e09abe;
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -49,7 +46,7 @@
 @media (max-width: 480px) {
   .divider {
     font-size: 0;
-    border-bottom: 2px var(--border-style) #E09ABE;
+    border-bottom: 2px var(--border-style) #e09abe;
     line-height: 0;
   }
 
@@ -59,71 +56,73 @@
 }
 
 .jobDate {
-    font-style: italic;
-    color: #8B6B7A;
-    margin-bottom: 5px;
+  font-style: italic;
+  color: #8b6b7a;
+  margin-bottom: 5px;
 }
 
 .experienceHeader {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .dashFill {
-    flex: 1;
-    border-bottom: 1px dashed #A8518A;
-    min-width: 20px;
-  }
-  
-  .experienceRole {
-    white-space: nowrap;
-  }
-  
-  @media (max-width: 480px) {
-    .dashFill {
-      display: none;
-    }
-  }
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-  /* Blinking cursor */
+.dashFill {
+  flex: 1;
+  border-bottom: 1px dashed #a8518a;
+  min-width: 20px;
+}
+
+.experienceRole {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .dashFill {
+    display: none;
+  }
+}
+
+/* Blinking cursor */
 .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #2C1B24;
-    animation: blink 1s infinite;
-    margin-left: 2px;
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #2c1b24;
+  animation: blink 1s infinite;
+  margin-left: 2px;
 }
 
 @keyframes blink {
-    0%, 49% { 
-        opacity: 1; 
-    }
-    50%, 100% { 
-        opacity: 0; 
-    }
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .bullet {
-    color: #E09ABE
+  color: #e09abe;
 }
 
 .contactInfoBox {
-    text-align: center;
+  text-align: center;
 }
 
 .styleBar {
-    padding: 4px 8px;
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    border-top: 2px solid #E09ABE;
-    font-size: 12px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  border-top: 2px solid #e09abe;
+  font-size: 12px;
 }
 .statusSection {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .techStack {
@@ -144,5 +143,3 @@
 .skills {
   line-height: 1.5;
 }
-
-

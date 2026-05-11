@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #2C1B24
+  color: #2c1b24;
 }
 
 .addressBar .field-border {

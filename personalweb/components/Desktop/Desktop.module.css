@@ -1,42 +1,41 @@
-
 .desktop {
-    position: relative;
-    height: calc(100vh - 40px);
-    overflow: hidden;
-} 
+  position: relative;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+}
 
 .desktopWindow {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 .iconGrid {
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
 }
 /* windows float on top */
 .windowLayer {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .folder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;          
-    padding: 0.75rem;    
-    outline: none;
-    width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  outline: none;
+  width: 80px;
 }
 
 .iconHeading {
-    margin: 0;
-    color: #2C1B24
+  margin: 0;
+  color: #2c1b24;
 }
 
-.iconSub{
-    margin:0;
-    color: #8B6B7A
+.iconSub {
+  margin: 0;
+  color: #8b6b7a;
 }

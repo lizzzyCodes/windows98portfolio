@@ -1,9 +1,8 @@
-
 .buttonLabel {
-    display:flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
-    padding: 4px;
+  padding: 4px;
 }
