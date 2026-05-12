@@ -18,13 +18,14 @@ export const desktopIcons = [
     icon: "/icon/Resume.png",
     type: "about",
   },
-  {
+  //TODO: for now commented because small tweaks not there yet
+  /*{
     folderName: "My Computer",
     type: "mycomputer",
     icon: "/icon/mycomputer.jpg",
-  },
+  }, */
   { folderName: "Resume", type: "resume", icon: "/icon/text.png" },
-  { folderName: "Music", type: "music", icon: "/icon/cd.png" },
+  // { folderName: "Music", type: "music", icon: "/icon/cd.png" },
   { folderName: "Outlook", type: "connect", icon: "/icon/email.png" },
 ];
 
