@@ -25,7 +25,7 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
             id: crypto.randomUUID(),
             type,
             minimized: false,
-            isMaximized: false,
+            maximized: false,
             zIndex: nextZIndex,
             x: 120,
             y: 80,
@@ -67,9 +67,7 @@ export function DesktopProvider({ children }: { children: React.ReactNode }) {
 
   const maximizeWindow = (id: string) => {
     setWindows((prev) =>
-      prev.map((w) =>
-        w.id === id ? { ...w, isMaximized: !w.isMaximized } : w,
-      ),
+      prev.map((w) => (w.id === id ? { ...w, maximized: !w.maximized } : w)),
     );
   };
 
