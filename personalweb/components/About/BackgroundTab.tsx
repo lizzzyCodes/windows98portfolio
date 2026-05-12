@@ -1,7 +1,7 @@
 export const BackgroundTab = () => {
   return (
     <>
-      <div className="field-border" style={{ padding: "8px" }}>
+      <div className="field-border" style={{ padding: "8px", fontSize: 16 }}>
         This work is personal to me. My own university journey started with
         advisors discouraging me from majoring in computer science, telling me
         the coursework would be too difficult. That experience shaped a deep

@@ -1,7 +1,7 @@
 const MentorshipTab = () => {
   return (
     <>
-      <ul className="tree-view">
+      <ul className="tree-view" style={{ fontSize: 16 }}>
         <li>
           What I do
           <ul>

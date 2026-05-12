@@ -10,9 +10,7 @@ export default function ConnectWindow() {
   return (
     <>
       <div className={styles.body}>
-        <div>
-          Always happy to chat about opportunities, collabs, or just say hi.
-        </div>
+        <div>Always happy to chat about opportunities or just say hi.</div>
 
         <div className={styles.links}>
           {connectLinks.map((link) => (

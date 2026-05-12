@@ -3,6 +3,12 @@
   align-items: center;
 }
 
+.button:hover {
+  background: var(--dialog-blue-light);
+  border-color: var(--dialog-blue);
+}
+
 .icon {
   padding: 4px;
 }
+

@@ -27,6 +27,7 @@ export default function DesktopItem({
           width={width}
           height={height}
           alt="folder"
+          loading="eager"
         />
         <p className={styles.iconHeading}>{iconHeading}</p>
         <p className={styles.iconSub}>{iconSubHeading}</p>

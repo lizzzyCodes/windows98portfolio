@@ -8,11 +8,17 @@ const AboutTab = () => {
     <div className="window" role="tabpanel">
       <div className="window-body">
         <div className={styles.image}>
-          <Image src="/images/deftones.jpg" fill alt="deftones album cover" />
+          <Image
+            src="/images/ComputerHeadshot.jpg"
+            fill
+            alt="headshot"
+            style={{ objectFit: "cover" }}
+          />
         </div>
 
         <p className={styles.heading}>{socialLinks.name}</p>
-        <p>{aboutData.about}</p>
+        <p className={styles.bodyText}>{aboutData.about}</p>
+
         <a
           href={socialLinks.linkedIn}
           target="_blank"
