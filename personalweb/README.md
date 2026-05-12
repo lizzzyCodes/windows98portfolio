@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# win98-portfolio
 
-## Getting Started
+A personal developer portfolio built as a fully interactive (soon) Windows 98 desktop environment using Next.js, React, and TypeScript, styled with 98.css and a custom pink color palette.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Clickable desktop icons and a functional Start Menu
+- Window management system with z-index stacking, singleton enforcement (no duplicate windows)
+- Resume rendered as a Notepad-style text window with retro box-drawing character dividers (`═`, `─`, `-`) and a section/header pattern built from composable components.
+- Themed using 98.css as the base with custom overrides: `#FFF0F5` dialog backgrounds, `#E09ABE → #F5A8D0` title bar,`#A8518A` borders, `#2C1B24` primary text.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Inspo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Window System — `components/Window/` + `app/src/data/desktop/`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The core abstraction. `DesktopContext` and `DesktopProvider` manage all window state: an array of `WindowInstance` objects tracking id, type, z-index, position, minimized/maximized flags. `useDesktop` exposes `openWindow`, `closeWindow`, `focusWindow`, `minimizeWindow`, `maximizeWindow`, and `toggleMenu`. The `Window` component is the single shell — it renders the 98.css title bar, control buttons, and wraps `{children}`. Content components never render their own `<Window>` wrapper.
 
-## Learn More
+### Window Registry — `components/Desktop/WindowRegistry.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+Maps window type strings (`"about"`, `"resume"`, `"music"`, `"mycomputer"`, `"connect"`) to their metadata: display title, optional desktop-only width, and the React component to render inside the shell. This is the single source of truth for what windows exist and how they're configured.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Desktop Layout — `components/Desktop/DesktopLayout.tsx`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The top-level composition layer. Renders the icon grid from `desktopIcons` data and the window layer by mapping over `windows` state, looking up each entry in `windowRegistry`, and wrapping it in `<Window>`. Two `<section>` elements: one for icons, one for open windows.
 
-## Deploy on Vercel
+### Desktop Icons + Start Menu — `components/Desktop/DesktopItem.tsx` + `components/Menu/Menu.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Both consume the same `desktopIcons` array from `app/src/data/data.ts` and call `openWindow(type)` on click. The Start Menu lives in the Footer/taskbar and its visibility is managed through `DesktopContext` (`isMenuOpen`, `toggleMenu`, `closeMenu`) so opening a window automatically dismisses the menu.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Resume Window — `components/Resume/`
+
+The most component-heavy window. `ResumeSection` wraps the repeating `Divider → SectionHeader → Divider → {children}` pattern. `ExperienceHeader` uses a flex layout with a dashed fill element that shrinks responsively. `Divider` renders overflow-clipped Unicode box-drawing characters (`═`, `─`, `-`) via a variant prop. Resume data (companies, roles, highlights) lives in `app/src/data/` as typed objects.
+
+### Shared Components — `components/Divider/`, `components/StatusBar/`
+
+`Divider` takes a `variant` prop (`double`, `dashed`, `single`) mapped to box-drawing characters, rendered as a 200-char repeated string clipped by `overflow: hidden`. `StatusBar` is a `field-border` footer placed as a sibling to the window body content, not inside it.
+
+### Static Data — `app/src/data/`
+
+All static content (desktop icon definitions, folder structures for the "My Setup" window, resume entries) lives here as typed TypeScript exports, imported at build time. Not in `public/` — these are bundled, not served as raw files.
+
+### Responsive Behavior — `components/Window/Window.module.css`
+
+The registry `width` is passed as a CSS custom property (`--window-width`) and only applies above 600px. Below that breakpoint, windows go full-width and absolutely-positioned coordinates are overridden. The Win98 chrome (title bar, borders, buttons) is preserved at all sizes.
+
+## Tech Stack
+
+- **Next.js** 16.2.4 (App Router)
+- **React** 19.2.4
+- **TypeScript** 5
+- **98.css** — base Windows 98 UI primitives
+- **CSS Modules** — scoped component styles with custom property overrides
