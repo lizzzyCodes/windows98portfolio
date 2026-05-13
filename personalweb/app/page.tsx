@@ -1,6 +1,4 @@
 "use client";
-
-import "../98.css/style.css";
 import React from "react";
 import { DesktopProvider } from "./src/data/desktop/DesktopProvider";
 import DesktopLayout from "@/components/Desktop/Desktop";

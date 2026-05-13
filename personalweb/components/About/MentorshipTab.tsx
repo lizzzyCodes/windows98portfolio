@@ -1,7 +1,9 @@
+import styles from "./About.module.css";
+
 const MentorshipTab = () => {
   return (
     <>
-      <ul className="tree-view" style={{ fontSize: 16 }}>
+      <ul className={`tree-view ${styles.bodyText}`}>
         <li>
           What I do
           <ul>
