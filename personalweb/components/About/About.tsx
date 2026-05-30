@@ -45,7 +45,11 @@ export default function About() {
           ))}
         </menu>
 
-        <div>{TAB_COMPONENTS[activeTab]}</div>
+        <div className="window" role="tabpanel">
+          <div className="window-body">
+            {TAB_COMPONENTS[activeTab]}
+          </div>
+        </div>
       </div>
 
       <StatusBar

@@ -5,30 +5,28 @@ import { socialLinks, aboutData } from "@/app/src/data/data";
 
 const AboutTab = () => {
   return (
-    <div className="window" role="tabpanel">
-      <div className="window-body">
-        <div className={styles.image}>
-          <Image
-            src="/images/ComputerHeadshot.jpg"
-            height={400}
-            width={300}
-            alt="headshot"
-          />
-        </div>
-
-        <p className={styles.heading}>{socialLinks.name}</p>
-        <p className={styles.bodyText}>{aboutData.about}</p>
-
-        <a
-          href={socialLinks.linkedIn}
-          target="_blank"
-          rel="noreferrer"
-          className={styles.linkRow}
-        >
-          <ButtonWithLogo src={"/icon/email.png"} buttonLabel="Lets Connect" />
-        </a>
+    <>
+      <div className={styles.image}>
+        <Image
+          src="/images/ComputerHeadshot.jpg"
+          height={400}
+          width={300}
+          alt="headshot"
+        />
       </div>
-    </div>
+
+      <p className={styles.heading}>{socialLinks.name}</p>
+      <p className={styles.bodyText}>{aboutData.about}</p>
+
+      <a
+        href={socialLinks.linkedIn}
+        target="_blank"
+        rel="noreferrer"
+        className={styles.linkRow}
+      >
+        <ButtonWithLogo src={"/icon/email.png"} buttonLabel="Lets Connect" />
+      </a>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ type WindowRegistryEntry = {
 };
 
 export const windowRegistry: Record<string, WindowRegistryEntry> = {
-  about: { title: "whoami", component: <About /> },
+  about: { title: "whoami", component: <About />, width: 450 },
   music: { title: "CD Player", width: 500, component: <MusicWindow /> },
   mycomputer: {
     title: "My Setup",
