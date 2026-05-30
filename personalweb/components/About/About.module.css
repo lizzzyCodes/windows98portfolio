@@ -5,19 +5,18 @@
 
 .image {
   position: relative;
-  height: 300px;
 }
 
 .heading {
   font-family: Arial, sans-serif;
-  font-size: 32px;
+  font-size: var(--text-heading);
   font-weight: bold;
   color: black;
 }
 
 .bodyText {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: var(--text-subheading);
 }
 
 .linkRow:hover button {

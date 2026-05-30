@@ -1,7 +1,9 @@
 .body {
   display: flex;
   flex-direction: column;
-  min-width: 360px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
   padding: 0;
 }
 

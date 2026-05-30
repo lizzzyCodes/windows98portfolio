@@ -24,13 +24,11 @@ export default function Window({ entry, title, width, children }: WindowProps) {
   const { closeWindow, minimizeWindow, maximizeWindow, focusWindow } =
     useDesktop();
   // if (entry.minimized) return null;
-  const style: React.CSSProperties &
-    Record<string, string | number | undefined> = {
-    "--window-width": width ? `${width}px` : undefined,
-    "--window-left": `calc(50% - ${(width ?? 400) / 2}px)`,
-    "--window-top": `${entry.y}px`,
+  const style = {
+    "--window-width": width ? `${width}px` : "auto",
     zIndex: entry.zIndex,
-  };
+  } as React.CSSProperties;
+
   const windowClass = [
     "window",
     styles.desktopWindow,
@@ -41,8 +39,8 @@ export default function Window({ entry, title, width, children }: WindowProps) {
 
   return (
     <div
+      className={windowClass}
       style={style}
-      className={`window ${styles.desktopWindow}`}
       onMouseDown={() => focusWindow(entry.id)}
     >
       <div className="title-bar">
@@ -66,7 +64,7 @@ export default function Window({ entry, title, width, children }: WindowProps) {
           />
         </div>
       </div>
-      <div className="window-body">{children}</div>
+      <div className={`window-body ${styles.windowBody || ""}`}>{children}</div>
     </div>
   );
 }

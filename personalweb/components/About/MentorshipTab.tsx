@@ -2,12 +2,12 @@ import styles from "./About.module.css";
 
 const MentorshipTab = () => {
   return (
-    <>
-      <ul className={`tree-view ${styles.bodyText}`}>
+    <div>
+      <ul className="tree-view">
         <li>
           What I do
           <ul>
-            <li>
+            <li className={styles.bodyText}>
               At Oracle, I've served as a panelist for over 30 girls through
               IGNITE STEM, an event designed to inspire middle school girls to
               pursue careers in tech
@@ -43,7 +43,7 @@ const MentorshipTab = () => {
           </ul>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

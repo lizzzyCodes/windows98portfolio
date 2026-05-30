@@ -10,7 +10,27 @@ html:root {
   --dialog-gray: #808080;
   --dialog-gray-light: #b5b5b5;
   --link-blue: #0000ff;
+
+  /* font UI */
+  --font-ui: "Pixelated MS Sans Serif", sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", monospace;
+
+  /* ---- Content Scale (Arial) ---- */
+  --text-heading: 32px;      /* h1 — your name, page-level titles */
+  --text-subheading: 20px;   /* h2 — section headers within a window */
+  --text-body: 16px;         /* default — paragraphs, lists, most content */
+  --text-secondary: 14px;    /* captions, supporting info, less prominent text */
+
+  /* ---- UI Chrome Scale (Pixelated MS Sans Serif) ---- */
+  --text-ui: 11px;           /* title bars, tabs, buttons, icon labels, menus */
+
+  /* ---- Line Heights ---- */
+  --leading-heading: 1.2;
+  --leading-body: 1.5;
+  --leading-ui: 1;
 }
+
 
 .title-bar-controls button[aria-label="Minimize"],
 .title-bar-controls button[aria-label].minimize {

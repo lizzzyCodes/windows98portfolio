@@ -26,5 +26,5 @@ export const windowRegistry: Record<string, WindowRegistryEntry> = {
     width: 900,
     component: <Resume />,
   },
-  connect: { title: "Let's Connect", component: <ConnectWindow /> },
+  connect: { title: "Let's Connect", component: <ConnectWindow />, width: 376 },
 };
