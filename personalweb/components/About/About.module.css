@@ -9,17 +9,20 @@
 
 .heading {
   font-family: Arial, sans-serif;
-  font-size: var(--text-heading);
+  font-size: var(--text-subheading);
   font-weight: bold;
-  color: black;
 }
 
 .bodyText {
   font-family: Arial, sans-serif;
-  font-size: var(--text-subheading);
+  font-size: var(--text-body);
 }
 
 .linkRow:hover button {
   background: var(--dialog-blue-light);
   border-color: var(--dialog-blue);
+}
+
+.bullet {
+  padding: 2px;
 }

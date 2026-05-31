@@ -17,13 +17,18 @@ html:root {
   --font-mono: "Courier Prime", "Courier New", monospace;
 
   /* ---- Content Scale (Arial) ---- */
-  --text-heading: 32px;      /* h1 — your name, page-level titles */
-  --text-subheading: 20px;   /* h2 — section headers within a window */
-  --text-body: 16px;         /* default — paragraphs, lists, most content */
-  --text-secondary: 14px;    /* captions, supporting info, less prominent text */
+  --text-heading: 32px;
+  /* h1 — your name, page-level titles */
+  --text-subheading: 20px;
+  /* h2 — section headers within a window */
+  --text-body: 16px;
+  /* default — paragraphs, lists, most content */
+  --text-secondary: 14px;
+  /* captions, supporting info, less prominent text */
 
   /* ---- UI Chrome Scale (Pixelated MS Sans Serif) ---- */
-  --text-ui: 11px;           /* title bars, tabs, buttons, icon labels, menus */
+  --text-ui: 11px;
+  /* title bars, tabs, buttons, icon labels, menus */
 
   /* ---- Line Heights ---- */
   --leading-heading: 1.2;
@@ -65,7 +70,7 @@ html:root {
   background-image: url("/icon/help.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 5px;
-} 
+}
 
 .title-bar-controls button[aria-label="Close"],
 .title-bar-controls button[aria-label].close {
@@ -95,14 +100,17 @@ html:root {
   height: 17px;
   background-image: url("/icon/button-up.svg");
 }
+
 ::-webkit-scrollbar-button:vertical:end {
   height: 17px;
   background-image: url("/icon/button-down.svg");
 }
+
 ::-webkit-scrollbar-button:horizontal:start {
   width: 16px;
   background-image: url("/icon/button-left.svg");
 }
+
 ::-webkit-scrollbar-button:horizontal:end {
   width: 16px;
   background-image: url("/icon/button-right.svg");
