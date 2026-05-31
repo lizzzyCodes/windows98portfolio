@@ -41,7 +41,7 @@ export const techStackData = [
   },
   {
     category: "Frontend",
-    skills: "React, Next.js, Redux, Tailwind CSS, MUI",
+    skills: "React, Next.js, Redux, Tailwind CSS, MUI, BluePrintJS, CSS, HTML",
   },
   {
     category: "Backend & APIs",
@@ -63,8 +63,12 @@ export const techStackData = [
   },
   {
     category: "Developer Tools",
-    skills: "Git, Version Control, Webpack",
+    skills: "Git, Version Control, Webpack, ESLint, Prettier, Yarn",
   },
+  {
+    category: "AI Tooling & Productivity",
+    skills: "Claude, Codex, Cline"
+  }
 ];
 
 export const socialLinks = {
