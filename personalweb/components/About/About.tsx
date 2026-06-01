@@ -5,9 +5,6 @@ import MentorshipTab from "./MentorshipTab";
 import AboutTab from "./AboutTab";
 
 // TODO:
-// update cover photo
-// update color on text
-// give it a fixed size but also responsive.
 // update padding on the bottom of buttons
 type Tab = "about" | "mentorship" | "background";
 
