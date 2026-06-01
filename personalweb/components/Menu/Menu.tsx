@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../Menu/Menu.module.css";
-import { desktopIcons } from "@/app/src/data/data";
-import { useDesktop } from "@/app/src/data/desktop/useDesktop";
+import { desktopIcons } from "@/src/data/data";
+import { useDesktop } from "@/src/desktop/useDesktop";
 
 export default function Menu() {
   const { openWindow } = useDesktop();

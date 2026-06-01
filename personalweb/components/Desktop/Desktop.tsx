@@ -1,8 +1,8 @@
 "use client";
 import DesktopItem from "@/components/Desktop/DesktopItem";
-import { desktopIcons } from "@/app/src/data/data";
+import { desktopIcons } from "@/src/data/data";
 import styles from "./Desktop.module.css";
-import { useDesktop } from "@/app/src/data/desktop/useDesktop";
+import { useDesktop } from "@/src/desktop/useDesktop";
 import Window from "../Window/Window";
 import { windowRegistry } from "./WindowRegistry";
 // displays the icons on the desktop page ...

@@ -1,5 +1,5 @@
 "use client";
-import { folders } from "@/app/src/data/data";
+import { folders } from "@/src/data/data";
 import MusicWindow from "../MusicWindow/MusicWindow";
 import About from "../About/About";
 // import ResumeWindow from "../Resume/ResumeWindow"; // TODO: delete soon pls

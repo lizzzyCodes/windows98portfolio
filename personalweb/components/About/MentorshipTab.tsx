@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import { Mentorship } from "@/app/src/data/data";
+import { Mentorship } from "@/src/data/data";
 
 const MentorshipTab = () => {
   return (

@@ -1,4 +1,4 @@
-import { socialLinks } from "@/app/src/data/data";
+import { socialLinks } from "@/src/data/data";
 import styles from "./Resume.module.css";
 
 export const ResumeHeader = () => {

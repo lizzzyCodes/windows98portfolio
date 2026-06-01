@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Connect.module.css";
 import StatusBar from "../StatusBar/StatusBar";
-import { connectLinks } from "@/app/src/data/data";
+import { connectLinks } from "@/src/data/data";
 import Image from "next/image";
 
 export default function ConnectWindow() {

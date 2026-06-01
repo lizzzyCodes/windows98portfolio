@@ -1,4 +1,4 @@
-import { useDesktop } from "@/app/src/data/desktop/useDesktop";
+import { useDesktop } from "@/src/desktop/useDesktop";
 import styles from "./Window.module.css";
 
 // TODO: fix the minimize and maximize.

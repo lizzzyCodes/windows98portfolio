@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { DesktopProvider } from "./src/data/desktop/DesktopProvider";
+import { DesktopProvider } from "../src/desktop/DesktopProvider";
 import DesktopLayout from "@/components/Desktop/Desktop";
 import Footer from "@/components/Footer/Footer";
 import Loading from "@/components/Loading/Loading";

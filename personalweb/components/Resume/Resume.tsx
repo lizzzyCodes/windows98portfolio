@@ -3,11 +3,11 @@ import { TabBar } from "../WindowMenuBar/MenuBar";
 import { SectionHeader } from "./SectionHeader";
 import { Dates } from "./Dates";
 import { Experience } from "./Experience";
-import { techStackData } from "@/app/src/data/data";
+import { techStackData } from "@/src/data/data";
 import { TechStack } from "./TechStack";
 import { Divider } from "./Divider";
 import { ContactInfo } from "./ContactInfo";
-import { socialLinks, experience } from "@/app/src/data/data";
+import { socialLinks, experience } from "@/src/data/data";
 import StatusBar from "../StatusBar/StatusBar";
 import { ExperienceHeader } from "./ExperienceHeader";
 

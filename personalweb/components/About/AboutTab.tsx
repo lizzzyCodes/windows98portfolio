@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./About.module.css";
 import ButtonWithLogo from "../Buttons/ButtonWithLogo";
-import { socialLinks, aboutData } from "@/app/src/data/data";
+import { socialLinks, aboutData } from "@/src/data/data";
 
 const AboutTab = () => {
   return (
