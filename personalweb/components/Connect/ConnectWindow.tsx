@@ -33,7 +33,7 @@ export default function ConnectWindow() {
                 <span className={styles.linkLabel}>{link.label}</span>
                 <span>{link.description}</span>
               </div>
-              <button>Open ↗</button>
+              <button className={styles.openButton}>Open <Image src="/icon/download.svg" width={15} height={15} alt="newtablink" /></button>
             </a>
           ))}
         </div>
