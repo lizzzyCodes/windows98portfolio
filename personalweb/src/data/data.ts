@@ -31,7 +31,7 @@ export const desktopIcons = [
 
 export const aboutData = {
   about:
-    "Climate-focused software engineer specializing in frontend/mobile systems, energy platforms, and spatial/data-driven applications.",
+    "Software engineer specializing in frontend and mobile development, building performant, user-focused applications powered by complex data and modern web technologies.",
 };
 
 export const techStackData = [
